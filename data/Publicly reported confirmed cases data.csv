@@ -1,4 +1,4 @@
-﻿Province,Death,Disease_Onset_Date,Diagnosis_Date,Infection_Before_1/22/2020,Discharge_Date,End_of_Followup,Followup_time,Sex,Age,Hypertension,Diabetes,History_of_Surgery,CHD,Cerebral_Infarction,Chronic_Bronchitis,COPD,Other_Lung_Disease,Cardiac_Failure,Renal_Failure,Hepatic_Failure,Other_Diseases,Source_Websit_1,Source_Websit_2,Source_Websit_3
+﻿Province,Death,Disease_Onset_Date,Diagnosis_Date,Infection_Before_1/22/2020,Discharge_Date,End_of_Followup,Followup_Days,Sex,Age,Hypertension,Diabetes,History_of_Surgery,CHD,Cerebral_Infarction,Chronic_Bronchitis,COPD,Other_Lung_Disease,Cardiac_Failure,Renal_Failure,Hepatic_Failure,Other_Diseases,Source_Websit_1,Source_Websit_2,Source_Websit_3
 Anhui,0,1/24/20,,0,2/21/20,3/8/20,44,1,29,0,0,0,0,0,0,0,0,0,0,1,1,http://www.dg.gov.cn/jjdz/dzyw/content/post_2830815.html,,
 Anhui,0,1/22/20,1/28/20,1,,3/8/20,46,1,67,1,0,0,0,0,0,0,0,1,0,0,0,http://www.ahwang.cn/newsflash/20200130/1974050.html,,
 Anhui,0,1/26/20,1/27/20,0,,3/8/20,42,1,50,1,0,0,0,0,0,0,0,1,0,0,0,http://www.ahwang.cn/newsflash/20200130/1974048.html,,
