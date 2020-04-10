@@ -1,0 +1,369 @@
+---
+title: "History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study"
+output: md_document
+---
+[![DOI](https://doi.org/10.1101/2020.03.23.20041848)](https://doi.org/10.1101/2020.03.23.20041848)
+
+
+```{r opts, include=FALSE}
+knitr::opts_knit$set(root.dir = here::here())
+knitr::opts_chunk$set(echo=F, message=F, warning=F, eval=T,
+                      fig.align='center',fig.pos='ht')
+```
+
+```{r load and pre-processing, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+library(survival)
+library(KMsurv)
+library(survminer)
+library(ggplot2)
+library(multipleNCC)
+library(table1)
+library(finalfit)
+library(dplyr)
+
+## read in dataset
+covid = read.csv('/Users/tiangu/Desktop/cov-19/Final result/Final paper/Publicly reported confirmed cases data.csv') 
+
+covid = read.csv('/data/Publicly reported confirmed cases data.csv') 
+
+#creating new variables
+covid$Male = 2- covid$Sex
+covid$chronic = covid$Hypertension + covid$CHD + covid$Chronic_Bronchitis + covid$Other_Lung_Disease + covid$Diabetes + covid$Cerebral_Infarction + covid$Hepatic_Failure + covid$Cardiac_Failure + covid$Renal_Failure + covid$COPD + covid$Other_Disease
+covid$total_chronic = ifelse(covid$chronic >= 4, 4, covid$chronic)
+covid$chronic = ifelse(covid$chronic > 0, 1, 0)
+
+#creating new time variables
+timeline = data.frame('time'=c('1','2','3','4'), start = c('12-13-2019','01-11-2020','01-23-2020','02-02-2020'), end = c('01-10-2020','01-22-2020','02-01-2020','02-18-2020'))
+timeline$start = base::as.Date(timeline$start, format="%m-%d-%Y")
+timeline$end = base::as.Date(timeline$end, format="%m-%d-%Y")
+covid$Disease_Onset_Date = as.Date(as.POSIXct(covid$Disease_Onset_Date,format='%m/%d/%Y %H:%M:%S'),format='%m-%d-%Y')
+covid$timeline = NA
+for (i in seq_len(nrow(timeline))) {
+  covid$timeline = ifelse(is.na(covid$timeline) & covid$Disease_Onset_Date >= timeline$start[i] & covid$Disease_Onset_Date <= timeline$end[i], timeline$time[i], covid$timeline)                      
+}
+covid$Early_Infection = ifelse(covid$timeline %in% c(1, 2), 1, 0)
+
+#remove patients with NA, otherwise cannot calculate weights
+covid = covid[is.na(covid$Followup_Days) == FALSE,]
+covid = covid[complete.cases(covid[,c('Death','History_of_Surgery','Hypertension','CHD','Chronic_Bronchitis','COPD','Diabetes','Early_Infection','Age','Male')]),]
+
+#specify samplestat for package multipleNCC
+covid$samplestat = ifelse(covid$Death == 1, 2, 1)
+
+#calculate sampling probability for all controls & matching upper to 3 controls for each case
+covid$KMP = multipleNCC::KMprob(covid$Followup_Days, 
+                                samplestat=covid$samplestat,
+                                m=3,
+                                match.var = cbind(covid$Age, covid$Male), 
+                                match.int = c(-1, 1, 0, 0)) #match on gender and age +- 1
+
+#Final dataset: excluding controls with zero sampling probability
+covid_sub = covid[covid$KMP > 0,] 
+
+```
+
+
+```{r Cox model , include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+
+#####################################################
+####### Weighted Multivariate Cox regression #########
+#####################################################
+knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death) ~ Age + Male + Early_Infection + total_chronic,
+              data = covid_sub,
+              weights = 1/KMP,
+              robust=TRUE))))
+
+knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death) ~ Age + Male + Early_Infection + CHD,
+              data = covid_sub,
+              weights = 1/KMP, 
+              robust=TRUE))))
+
+knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death) ~ Age + Male + Early_Infection + CHD + Cerebral_Infarction + COPD + Renal_Failure, 
+              data = covid_sub,
+              weights = 1/KMP, 
+              robust=TRUE))))
+```
+
+
+```{r Sensitivity analysis, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+############### sensitivity analsyis: unweighted logistic regression 
+fit.log = glm(Death~Age+Male+Early_Infection+CHD,
+                  data = covid_sub,
+                  family = binomial(link='logit'))
+fit.log = glm(Death ~ Age + Male + Early_Infection + CHD + Cerebral_Infarction + COPD + Renal_Failure, data = covid_sub, family = binomial(link='logit'))
+summary(fit.log)
+cbind(OR = round(exp(broom::tidy(fit.log)$estimate),3), P=round(broom::tidy(fit.log)$p.value, 4))
+round(exp(confint(fit.log)),2)
+
+fit.log = glm(Death ~ Age + Male + Early_Infection + total_chronic, data = covid_sub, family = binomial(link='logit'))
+summary(fit.log)
+cbind(OR = round(exp(broom::tidy(fit.log)$estimate),3), P=round(broom::tidy(fit.log)$p.value, 4))
+round(exp(confint(fit.log)),2)
+```
+
+```{r univariate weighted Cox, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+#####################################################
+####### Univariate Weighted Cox regression #########
+#####################################################
+summary(coxph(Surv(time=Followup_Days, event=Death)~Age, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Male, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Early_Infection, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~History_of_Surgery, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Hypertension, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~CHD, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Chronic_Bronchitis, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~COPD, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Diabetes, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~total_chronic, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Cerebral infarction, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Cardiac failure, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Renal failure, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Hepatic failure, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+```
+
+```{r KM plot, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+#####################################################
+####### KM Plot #########
+#####################################################
+fit_plot = survfit(Surv(time=Followup_Days, event=Death) ~ Coronary_Heart_Disease, 
+                   weights = 1/KMP,
+                   data = covid_sub)
+
+p= ggsurvplot(fit_plot, 
+           data = covid_sub, 
+           risk.table = TRUE, 
+           legend.labs = c('No',"Yes"),
+           #ylim = c(0, 1),
+           linetype = "strata",
+           palette = c("black", "black"),
+           ylab = 'Probability of Survival',
+           xlab = 'Time from symptom onset (days)',
+           title = 'Coronary Heart Disease',
+           pval = FALSE,
+           #ylim = c(0.95,1),
+           censor.shape=NA)
+
+ggpar(p, 
+      font.main = c(18, "bold"),
+      font.x = c(12, "bold"),
+      font.y = c(12, "bold"),
+      font.caption = c(12, "bold"), 
+      font.legend = c(12, "bold"), 
+      font.tickslab = c(12, "bold"))
+
+par(mfrow=c(1,1))
+surv2 = coxph(Surv(time=Followup_Days, event=Death) ~ Age + Male + Early_Infection + Hypertension + CHD + Cerebral_Infarction + Chronic_Bronchitis + COPD + Renal_Failure + Diabetes + Cardiac_Failure + Renal_Failure + Hepatic_Failure, weights = 1/KMP, data = covid_sub)
+cox1 = survfit(surv2, newdata= c('Age'=65,'Male'=0,'Early_Infection'=0,'Hypertension'=0,'CHD'=1,'Cerebral infarction'=0,'Chronic_Bronchitis'=0,'COPD'=0,'Renal failure'=0, 'Diabetes'=0,
+                                'Cardiac failure'=0,'Renal failure'=0,'Hepatic failure'=0))
+cox0 = survfit(surv2, newdata= c('Age'=65,'Male'=0,'Early_Infection'=0,'Hypertension'=0,'CHD'=0,'Cerebral infarction'=0,'Chronic_Bronchitis'=0,'COPD'=0,'Renal failure'=0, 'Diabetes'=0,
+                                 'Cardiac failure'=0,'Renal failure'=0,'Hepatic failure'=0))
+plot(cox0, 
+     lty = 'dashed',
+     conf.int=FALSE,
+     ylab='',
+     xlab='',
+     cex.lab = 1.2,
+     main='Estimated Survival Probabitliy over Time \n for a 65-year-old Female without Other Comorbidities',
+     lwd = 2)
+mtext(side=1, line=2.5, "Time from symptom onset (days)", font=1.5,cex=1.2)
+mtext(side=2, line=2, "Survival Probabitliy", font=1.5,cex=1.2)
+lines(cox1,
+      conf.int=FALSE,
+      cex.lab = 1.2,
+      lwd = 2,
+      lty = 'solid')
+legend("bottomright", c('no CHD','CHD'), lty=c('dashed','solid'), bty="n", lwd = 2,cex = 1.2)
+
+summary(cox0)
+summary(cox1)
+cox0
+cox1
+
+#univariate weighted cox regression
+survdiff(Surv(time=Followup_Days, event=Death) ~ Male, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ 湖北, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ Early_Infection, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ History_of_Surgery, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ Hypertension, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ CHD, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ Chronic_Bronchitis, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ Other_Lung_Disease, data = covid_sub)
+survdiff(Surv(time=Followup_Days, event=Death) ~ Diabetes, data = covid_sub)
+
+summary(coxph(Surv(time=Followup_Days, event=Death)~Male, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~湖北, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Early_Infection, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~History_of_Surgery, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Hypertension, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~CHD, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Chronic_Bronchitis, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~COPD, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death)~Diabetes, data = covid_sub, weights = 1/KMP, robust=TRUE)) 
+summary(coxph(Surv(time=Followup_Days, event=Death) ~ Cardiac failure, data = covid_sub, weights = 1/KMP))
+summary(coxph(Surv(time=Followup_Days, event=Death) ~ Renal failure, data = covid_sub, weights = 1/KMP))
+summary(coxph(Surv(time=Followup_Days, event=Death) ~ Hepatic failure, data = covid_sub, weights = 1/KMP))
+
+#median survival time
+survfit(Surv(time=Followup_Days, event=Death) ~ Male, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ 湖北, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Early_Infection, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ History_of_Surgery, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Hypertension, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ CHD, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Chronic_Bronchitis, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ COPD, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Diabetes, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Cardiac failure, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Renal failure, data = covid_sub, weights = 1/KMP)
+survfit(Surv(time=Followup_Days, event=Death) ~ Hepatic failure, data = covid_sub, weights = 1/KMP)
+
+#median followup time
+covid_sub$event_follow = ifelse(covid_sub$Death == 1, 0, 1)
+survfit(Surv(time=Followup_Days, event=event_follow) ~ 1, data = covid_sub)
+
+```
+
+
+```{r Summary table, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+#######################################
+####### Table 1 #########
+#######################################
+rndr <- function(x, name, ...) {
+  if (length(x) == 0) {
+    y <- covid_table[[name]]
+    s <- rep("", length(render.default(x=y, name=name, ...)))
+    if (is.numeric(y)) {
+      p <- t.test(y ~ covid_table$Death)$p.value
+    } else {
+      p <- chisq.test(table(y, droplevels(covid_table$Death)))$p.value
+    }
+    s[2] <- sub("<", "&lt;", format.pval(p, digits=3, eps=0.001))
+    s
+  } else {
+    render.default(x=x, name=name, ...)
+  }
+}
+
+rndr.strat <- function(label, n, ...) {
+  ifelse(n==0, label, render.strat.default(label, n, ...))
+}
+
+
+covid_table = covid_sub
+
+covid_table$Death = factor(covid_table$Death, levels = c(0,1,2), labels = c('Survivor','Death','P-value'))
+
+table1::table1(~Death, data=covid_table)
+table1::table1(~省份|Death, data=covid_table)
+
+
+covid_table$Male = factor(covid_table$Male, levels = c(0,1), labels = c('Female','Male'))
+covid_table$Early_Infection = factor(covid_table$Early_Infection, levels = c(0,1), labels = c('After 01/11/2020','Before 01/10/2020'))
+covid_table$History_of_Surgery = factor(covid_table$History_of_Surgery, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Hypertension = factor(covid_table$Hypertension, levels = c(0,1), labels = c('No','Yes'))
+covid_table$CHD= factor(covid_table$CHD, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Chronic_Bronchitis = factor(covid_table$Chronic_Bronchitis, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Other_Lung_Disease = factor(covid_table$Other_Lung_Disease, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Diabetes = factor(covid_table$Diabetes, levels = c(0,1), labels = c('No','Yes'))
+covid_table$COPD = factor(covid_table$COPD, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Cerebral_Infarction  = factor(covid_table$Cerebral_Infarction, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Cardiac_Failure = factor(covid_table$Cardiac_Failure, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Renal_Failure = factor(covid_table$Renal_Failure, levels = c(0,1), labels = c('No','Yes'))
+covid_table$Hepatic_Failure = factor(covid_table$Hepatic_Failure, levels = c(0,1), labels = c('No','Yes'))
+
+covid_table$total_chronic = factor(covid_table$total_chronic, levels = c(0,1,2,3,4))
+
+
+label(covid_table$Age) = 'Age'
+units(covid_table$Age) = 'years'
+label(covid_table$Male) = 'Sex'
+label(covid_table$湖北) = 'Hubei Province'
+label(covid_table$Early_Infection) = 'Early non-intervention period'
+label(covid_table$History_of_Surgery) ='History of surgery'
+label(covid_table$Hypertension) ='Hypertension'
+label(covid_table$CHD) ='Coronary heart disease'
+label(covid_table$Chronic_Bronchitis) ='Chronic_Bronchitis'
+label(covid_table$Other_Lung_Disease) ='Lung disease'
+label(covid_table$Diabetes) ='Diabetes'
+label(covid_table$total_chronic) = 'Total number of comorbidities'
+
+covid_table$`Total number of comorbidities` = covid_table$total_chronic
+
+table1::table1(~ Age+Male+Early_Infection+History_of_Surgery+Hypertension+CHD+Chronic_Bronchitis+COPD+Diabetes+Cerebral_Infarction +Cardiac_Failure+Renal_Failure+Hepatic_Failure+total_chronic|Death, 
+               data=covid_table,
+               droplevels=F, render=rndr, render.strat=rndr.strat)
+
+# Fisher's exact test for 
+fisher.test(covid_sub$History_of_Surgery, covid_sub$Death)
+covid_sub$total_chronic_0 = ifelse(covid_sub$total_chronic==0,1,0)
+covid_sub$total_chronic_1 = ifelse(covid_sub$total_chronic==1,1,0)
+covid_sub$total_chronic_2 = ifelse(covid_sub$total_chronic==2,1,0)
+covid_sub$total_chronic_3 = ifelse(covid_sub$total_chronic==3,1,0)
+covid_sub$total_chronic_4 = ifelse(covid_sub$total_chronic==4,1,0)
+chisq.test(covid_sub$total_chronic_0, covid_sub$Death)
+chisq.test(covid_sub$total_chronic_1, covid_sub$Death)
+chisq.test(covid_sub$total_chronic_2, covid_sub$Death)
+chisq.test(covid_sub$total_chronic_3, covid_sub$Death)
+chisq.test(covid_sub$total_chronic_4, covid_sub$Death)
+
+```
+
+# History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
+
+Updated: `r date()`
+
+[Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
+
+China has experienced an outbreak of a novel human coronavirus (SARS-CoV-2) since December 2019, which quickly became a worldwide pandemic in early 2020. There is limited evidence on the mortality risk effect of pre-existing comorbidities for coronavirus disease 2019 (COVID-19), which has important implications for early treatment. This study aims to evaluate the risk of pre-existing comorbidities on COVID-19 mortality, and provide clinical suggestions accordingly. Under the nested case-control design, a total of `r table(covid_sub)[` publicly reported deaths in locations outside of Hubei Province, China, between December 18th, 2019 and March 8th, 2020 were included as cases. Each case was matched with up to three controls, based on gender and age ± 1 year old (94 cases and 181 controls). 
+
+Quick links:
+
+- 
+- [Study Design and Rationale](#data-summary)
+- [Exposure and symptom onset windows](#exposure-and-symptom-onset-windows)
+- [Incubation period estimates](#incubation-period-estimates)
+- [Alternate estimates and sensitivity analyses](#alternate-estimates-and-sensitivity-analyses)
+- [Comparison to other estimates](#comparison-to-other-estimates)
+- [Parameter estimates](#parameter-estimates)
+- [Active monitoring analysis](#active-monitoring-analysis)
+- [Time to hospitalization](#time-to-hospitalization)
+
+## Study Design and Rationale
+
+    This study performed survival analysis under a nested case-control (NCC) design to assess the roles of common comorbidities (cardiocerebrovascular, endocrine and respiratory disease, etc.) in predicting mortality for COVID-19, among patients in mainland China outside of Hubei Province. The study period was from December 18th, 2019, when the first laboratory-confirmed case was announced in China, till March 8th, 2020.
+    
+    The study cohort was defined as all the publicly reported confirmed COVID-19 patients outside of Hubei Province in mainland China between the study period. During this period, 112 deaths outside of Hubei Province were reported by the National Health Committee of China, and 18 were excluded from the present study due to missingness of important clinical information. A total of 448 publicly reported laboratory-confirmed COVID-19 cases (94 deaths and 354 survivors) were initially collected. The data collection procedure was blinded to patient comorbidity information. All deaths were included as cases, and each case was matched with up to three controls on gender and age ± 1 year old (94 cases and 181 controls). The sample distribution across all 32 province-level regions in mainland China is presented in Appendix Table A1.
+
+## Data Collection Procedure
+
+    We routinely searched for daily news and public health reports on confirmed COVID-19 cases in all areas in mainland China outside of Hubei Province. Patients’ clinical and comorbidity characteristics were recorded and doubly confirmed by national/provincial/municipal health commission websites, the official COVID-19 data reporting websites in China. Follow-up time was defined as the duration from the date of disease onset till the end of observation on March 8th or when the participant died, whichever came first. For each eligible patient, we followed local reports to update their survival status until the end of follow-up time.
+    As illustrated in Figure 1,  the inclusion criterion was publicly reported COVID-19 patients who had complete information on basic demographics (age, gender and region), disease onset date--the first time a patient became symptomatic, and history of comorbidities (include but not limited to hypertension, cardiovascular disease, diabetes and respiratory diseases) were included in the analysis. Asymptomatic patients were not included in this study. In addition, we defined “comorbidity-free patients” as those who were specifically described as “no pre-existing medical condition/comorbidity” on the national/provincial/municipal health commission websites.
+    
+    ![Figure 1: Patient flow diagram detailing included subjects and exclusion criteria.](/data/Flowchart.png)
+    
+    In the following three steps, we used the No. 214 patient as an example to introduce the dynamic tracking method we used to identify any missing dates:
+    Step 1. Conducting an internet search on confirmed cases on baidu.com, the largest search engine in China, using keywords “confirmed COVID-19 cases report” and “pre-existing comorbidities.” A search result pertained to one confirmed case reported on the website of Municipal Health Commission of Binzhou (Shandong Province) on February 17th, described as “the 15th confirmed case: 30-year-old male without pre-existing morbidities, who lives in the neighborhood of Xincun Village. This patient was diagnosed positive on February 16th and is being treated with precaution in Bincheng hospital.” We recorded age, gender, region and comorbidity-free for this patient.
+    Step 2. We then determined the onset date of this patient based on another announcement on the same website. In this announcement titled “Possible exposure locations and times of the 15th confirmed case,” it says, “the patient was symptomatic on February 14th.”
+    Step 3. Finally, we confirmed the event status of this patient as discharged on March 3rd, by following the updates on this website.
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
