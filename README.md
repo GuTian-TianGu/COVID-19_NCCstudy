@@ -1,7 +1,7 @@
 History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
 ================================================================================================================
 
-Updated: Apr 10 2020
+Updated: Sat Apr 11 00:33:53 2020
 
 [Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
 
@@ -20,13 +20,14 @@ cases and 181 controls).
 
 Quick links:
 
-- [Study Design and Rationale](#study-rationale) {#study-rationale}
-- [Data Collection Procedure](#data-collection)
-- [Data Summary](#table1)
-- [Weighted Cox Proportional Hazard Model-Univariate](#univariate-Cox)
-- [Weighted Cox Proportional Hazard Model-Multivariate](#multivariate-Cox)
-- [KM plot](#KM-plot)
-- [Sensitivity Analyses](#Sensitivity-analysis)
+-   [Study Design and Rationale](#study-rationale)
+-   [Data Collection Procedure](#data-collection)
+-   [Data Summary](#table1)
+-   [Weighted Cox Proportional Hazard Model-Univariate](#univariate-Cox)
+-   [Weighted Cox Proportional Hazard
+    Model-Multivariate](#multivariate-Cox)
+-   [KM plot](#KM-plot)
+-   [Sensitivity Analyses](#Sensitivity-analysis)
 
 Study Design and Rationale
 --------------------------
@@ -105,6 +106,7 @@ discharged on March 3rd, by following the updates on this website.
 
 Summary Data
 ------------
+
 
 <table class="Rtable1">
 <thead>
@@ -844,6 +846,8 @@ Univariate Cox PH Model
 Multivariate Cox PH Model
 -------------------------
 
+Model 1:
+
 <table>
 <thead>
 <tr class="header">
@@ -896,6 +900,8 @@ Multivariate Cox PH Model
 </tbody>
 </table>
 
+Model 2:
+
 <table>
 <thead>
 <tr class="header">
@@ -947,6 +953,8 @@ Multivariate Cox PH Model
 </tr>
 </tbody>
 </table>
+
+Model 3:
 
 <table>
 <thead>
@@ -1041,11 +1049,13 @@ no other comorbidities). The estimated 30-day survival probability was
 heart disease.
 </p>
 
-
 Sensitivity Analyses
 --------------------
 
-Sensitivity analysis was performed using multivariate logistic regression to provide estimated odds ratio (ORs), which includes the same covariates as the multivariate weighted Cox model. 
+Sensitivity analysis was performed using multivariate logistic
+regression to provide estimated odds ratio (ORs), which includes the
+same covariates as the multivariate weighted Cox model. The results were
+similar.
 
 <table>
 <thead>
