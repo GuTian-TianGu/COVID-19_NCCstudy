@@ -1030,10 +1030,22 @@ Multivariate Cox PH Model
 KM Plot
 -------
 
-<img src="README_files/figure-markdown_strict/KM-plot-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-markdown_strict/KM-plot-1.png" alt="Estimated survival probability over time from the adjusted Cox proportional hazard model for an example patient profile (65-year-old female without CHD [dashed line] or with CHD [solid line], who had no other comorbidities). The estimated 30-day survival probability was 0.53 (95% CI [0.34-0.82]) for patients with pre-existing CHD, while 0.85 (95% CI [0.79-0.91]) for those without (p&lt;0.001). CHD=coronary heart disease."  />
+<p class="caption">
+Estimated survival probability over time from the adjusted Cox
+proportional hazard model for an example patient profile (65-year-old
+female without CHD \[dashed line\] or with CHD \[solid line\], who had
+no other comorbidities). The estimated 30-day survival probability was
+0.53 (95% CI \[0.34-0.82\]) for patients with pre-existing CHD, while
+0.85 (95% CI \[0.79-0.91\]) for those without (p&lt;0.001). CHD=coronary
+heart disease.
+</p>
+
 
 Sensitivity Analyses
 --------------------
+
+Sensitivity analysis was performed using multivariate logistic regression to provide estimated odds ratio (ORs), which includes the same covariates as the multivariate weighted Cox model. 
 
 <table>
 <thead>
