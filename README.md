@@ -1,7 +1,7 @@
 History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
 ================================================================================================================
 
-Updated: Fri Apr 10 22:46:11 2020
+Updated: Fri Apr 10 23:10:11 2020
 
 [Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
 
@@ -24,34 +24,88 @@ Quick links:
 -   [Data Collection Procedure](#data-collection)
 -   [Data Summary](#table1)
 -   [Weighted Cox Proportional Hazard Model-Univariate](#univariate-Cox)
--   [Weighted Cox Proportional Hazard Model-Multivariate](#multivariate-Cox)
+-   [Weighted Cox Proportional Hazard
+    Model-Multivariate](#multivariate-Cox)
 -   [KM plot](#KM-plot)
 -   [Sensitivity Analyses](#Sensitivity-analysis)
 
 Study Design and Rationale
-------------
+--------------------------
 
-This study performed survival analysis under a nested case-control (NCC) design to assess the roles of common comorbidities (cardiocerebrovascular, endocrine and respiratory disease, etc.) in predicting mortality for COVID-19, among patients in mainland China outside of Hubei Province. The study period was from December 18th, 2019, when the first laboratory-confirmed case was announced in China, till March 8th, 2020.
-    
-The study cohort was defined as all the publicly reported confirmed COVID-19 patients outside of Hubei Province in mainland China between the study period. During this period, 112 deaths outside of Hubei Province were reported by the National Health Committee of China, and 18 were excluded from the present study due to missingness of important clinical information. A total of 448 publicly reported laboratory-confirmed COVID-19 cases (94 deaths and 354 survivors) were initially collected. The data collection procedure was blinded to patient comorbidity information. All deaths were included as cases, and each case was matched with up to three controls on gender and age ± 1 year old (`r as.numeric(table(covid_sub$Death)[2])` cases and `r as.numeric(table(covid_sub$Death)[1])` controls). The sample distribution across all 32 province-level regions in mainland China is presented below:
-    
-![Figure 1: Patient flow diagram detailing included subjects and exclusion criteria.](/data/Flowchart.png)
+This study performed survival analysis under a nested case-control (NCC)
+design to assess the roles of common comorbidities
+(cardiocerebrovascular, endocrine and respiratory disease, etc.) in
+predicting mortality for COVID-19, among patients in mainland China
+outside of Hubei Province. The study period was from December 18th,
+2019, when the first laboratory-confirmed case was announced in China,
+till March 8th, 2020.
+
+The study cohort was defined as all the publicly reported confirmed
+COVID-19 patients outside of Hubei Province in mainland China between
+the study period. During this period, 112 deaths outside of Hubei
+Province were reported by the National Health Committee of China, and 18
+were excluded from the present study due to missingness of important
+clinical information. A total of 448 publicly reported
+laboratory-confirmed COVID-19 cases (94 deaths and 354 survivors) were
+initially collected. The data collection procedure was blinded to
+patient comorbidity information. All deaths were included as cases, and
+each case was matched with up to three controls on gender and age ± 1
+year old (94 cases and 181 controls). The sample distribution across all
+32 province-level regions in mainland China is presented in Appendix
+Table A1.
 
 Data Collection Procedure
+-------------------------
+
+We routinely searched for daily news and public health reports on
+confirmed COVID-19 cases in all areas in mainland China outside of Hubei
+Province. Patients’ clinical and comorbidity characteristics were
+recorded and doubly confirmed by national/provincial/municipal health
+commission websites, the official COVID-19 data reporting websites in
+China. Follow-up time was defined as the duration from the date of
+disease onset till the end of observation on March 8th or when the
+participant died, whichever came first. For each eligible patient, we
+followed local reports to update their survival status until the end of
+follow-up time.
+
+As illustrated in Figure 1, the inclusion criterion was publicly
+reported COVID-19 patients who had complete information on basic
+demographics (age, gender and region), disease onset date--the first
+time a patient became symptomatic, and history of comorbidities (include
+but not limited to hypertension, cardiovascular disease, diabetes and
+respiratory diseases) were included in the analysis. Asymptomatic
+patients were not included in this study. In addition, we defined
+“comorbidity-free patients” as those who were specifically described as
+“no pre-existing medical condition/comorbidity” on the
+national/provincial/municipal health commission websites. ![Figure 1:
+Patient flow diagram detailing included subjects and exclusion
+criteria.](/data/Flowchart.png)
+
+In the following three steps, we used the No. 214 patient as an example
+to introduce the dynamic tracking method we used to identify any missing
+dates:
+
+Step 1. Conducting an internet search on confirmed cases on baidu.com,
+the largest search engine in China, using keywords “confirmed COVID-19
+cases report” and “pre-existing comorbidities.” A search result
+pertained to one confirmed case reported on the website of Municipal
+Health Commission of Binzhou (Shandong Province) on February 17th,
+described as “the 15th confirmed case: 30-year-old male without
+pre-existing morbidities, who lives in the neighborhood of Xincun
+Village. This patient was diagnosed positive on February 16th and is
+being treated with precaution in Bincheng hospital.” We recorded age,
+gender, region and comorbidity-free for this patient.
+
+Step 2. We then determined the onset date of this patient based on
+another announcement on the same website. In this announcement titled
+“Possible exposure locations and times of the 15th confirmed case,” it
+says, “the patient was symptomatic on February 14th.”
+
+Step 3. Finally, we confirmed the event status of this patient as
+discharged on March 3rd, by following the updates on this website.
+
+Summary Data
 ------------
-We routinely searched for daily news and public health reports on confirmed COVID-19 cases in all areas in mainland China outside of Hubei Province. Patients’ clinical and comorbidity characteristics were recorded and doubly confirmed by national/provincial/municipal health commission websites, the official COVID-19 data reporting websites in China. Follow-up time was defined as the duration from the date of disease onset till the end of observation on March 8th or when the participant died, whichever came first. For each eligible patient, we followed local reports to update their survival status until the end of follow-up time.
-    
-As illustrated in Figure 1,  the inclusion criterion was publicly reported COVID-19 patients who had complete information on basic demographics (age, gender and region), disease onset date--the first time a patient became symptomatic, and history of comorbidities (include but not limited to hypertension, cardiovascular disease, diabetes and respiratory diseases) were included in the analysis. Asymptomatic patients were not included in this study. In addition, we defined “comorbidity-free patients” as those who were specifically described as “no pre-existing medical condition/comorbidity” on the national/provincial/municipal health commission websites.
-    
-![Figure 1: Patient flow diagram detailing included subjects and exclusion criteria.](/data/Flowchart.png)
-    
-In the following three steps, we used the No. 214 patient as an example to introduce the dynamic tracking method we used to identify any missing dates:
-
-Step 1. Conducting an internet search on confirmed cases on baidu.com, the largest search engine in China, using keywords “confirmed COVID-19 cases report” and “pre-existing comorbidities.” A search result pertained to one confirmed case reported on the website of Municipal Health Commission of Binzhou (Shandong Province) on February 17th, described as “the 15th confirmed case: 30-year-old male without pre-existing morbidities, who lives in the neighborhood of Xincun Village. This patient was diagnosed positive on February 16th and is being treated with precaution in Bincheng hospital.” We recorded age, gender, region and comorbidity-free for this patient.
-
-Step 2. We then determined the onset date of this patient based on another announcement on the same website. In this announcement titled “Possible exposure locations and times of the 15th confirmed case,” it says, “the patient was symptomatic on February 14th.”
-
-Step 3. Finally, we confirmed the event status of this patient as discharged on March 3rd, by following the updates on this website.
 
     ## [1] "<table class=\"Rtable1\">\n<thead>\n<tr>\n<th class='rowlabel firstrow lastrow'></th>\n<th class='firstrow lastrow'><span class='stratlabel'>Survivor<br><span class='stratn'>(n=181)</span></span></th>\n<th class='firstrow lastrow'><span class='stratlabel'>Death<br><span class='stratn'>(n=94)</span></span></th>\n<th class='firstrow lastrow'>P-value</th>\n<th class='firstrow lastrow'><span class='stratlabel'>Overall<br><span class='stratn'>(n=275)</span></span></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Age<span class='varunits'> (years)</span></span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>Mean (SD)</td>\n<td>64.2 (14.7)</td>\n<td>70.7 (13.3)</td>\n<td>&lt;0.001</td>\n<td>66.4 (14.5)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Median [Min, Max]</td>\n<td class='lastrow'>67.0 [24.0, 90.0]</td>\n<td class='lastrow'>72.5 [25.0, 94.0]</td>\n<td class='lastrow'></td>\n<td class='lastrow'>68.0 [24.0, 94.0]</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Sex</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>Female</td>\n<td>64 (35.4%)</td>\n<td>38 (40.4%)</td>\n<td>0.488</td>\n<td>102 (37.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Male</td>\n<td class='lastrow'>117 (64.6%)</td>\n<td class='lastrow'>56 (59.6%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>173 (62.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Early non-intervention period</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>After 01/11/2020</td>\n<td>138 (76.2%)</td>\n<td>67 (71.3%)</td>\n<td>0.453</td>\n<td>205 (74.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Before 01/10/2020</td>\n<td class='lastrow'>43 (23.8%)</td>\n<td class='lastrow'>27 (28.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>70 (25.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>History of surgery</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>175 (96.7%)</td>\n<td>90 (95.7%)</td>\n<td>0.956</td>\n<td>265 (96.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>6 (3.3%)</td>\n<td class='lastrow'>4 (4.3%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>10 (3.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Hypertension</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>114 (63.0%)</td>\n<td>52 (55.3%)</td>\n<td>0.27</td>\n<td>166 (60.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>67 (37.0%)</td>\n<td class='lastrow'>42 (44.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>109 (39.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Coronary heart disease</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>166 (91.7%)</td>\n<td>69 (73.4%)</td>\n<td>&lt;0.001</td>\n<td>235 (85.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>15 (8.3%)</td>\n<td class='lastrow'>25 (26.6%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>40 (14.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Chronic_Bronchitis</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>169 (93.4%)</td>\n<td>87 (92.6%)</td>\n<td>0.998</td>\n<td>256 (93.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>12 (6.6%)</td>\n<td class='lastrow'>7 (7.4%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>19 (6.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>COPD</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>176 (97.2%)</td>\n<td>87 (92.6%)</td>\n<td>0.136</td>\n<td>263 (95.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>5 (2.8%)</td>\n<td class='lastrow'>7 (7.4%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>12 (4.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Diabetes</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>135 (74.6%)</td>\n<td>68 (72.3%)</td>\n<td>0.797</td>\n<td>203 (73.8%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>46 (25.4%)</td>\n<td class='lastrow'>26 (27.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>72 (26.2%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Cerebral_Infarction</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>173 (95.6%)</td>\n<td>83 (88.3%)</td>\n<td>0.0446</td>\n<td>256 (93.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>8 (4.4%)</td>\n<td class='lastrow'>11 (11.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>19 (6.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Cardiac_Failure</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>169 (93.4%)</td>\n<td>84 (89.4%)</td>\n<td>0.353</td>\n<td>253 (92.0%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>12 (6.6%)</td>\n<td class='lastrow'>10 (10.6%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>22 (8.0%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Renal_Failure</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>175 (96.7%)</td>\n<td>88 (93.6%)</td>\n<td>0.384</td>\n<td>263 (95.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>6 (3.3%)</td>\n<td class='lastrow'>6 (6.4%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>12 (4.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Hepatic_Failure</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>181 (100%)</td>\n<td>91 (96.8%)</td>\n<td>0.0711</td>\n<td>272 (98.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>0 (0%)</td>\n<td class='lastrow'>3 (3.2%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>3 (1.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Total number of comorbidities</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>0</td>\n<td>68 (37.6%)</td>\n<td>21 (22.3%)</td>\n<td>&lt;0.001</td>\n<td>89 (32.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel'>1</td>\n<td>50 (27.6%)</td>\n<td>18 (19.1%)</td>\n<td></td>\n<td>68 (24.7%)</td>\n</tr>\n<tr>\n<td class='rowlabel'>2</td>\n<td>39 (21.5%)</td>\n<td>22 (23.4%)</td>\n<td></td>\n<td>61 (22.2%)</td>\n</tr>\n<tr>\n<td class='rowlabel'>3</td>\n<td>16 (8.8%)</td>\n<td>14 (14.9%)</td>\n<td></td>\n<td>30 (10.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>4</td>\n<td class='lastrow'>8 (4.4%)</td>\n<td class='lastrow'>19 (20.2%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>27 (9.8%)</td>\n</tr>\n</tbody>\n</table>\n"
 
@@ -645,7 +699,10 @@ Multivariate Cox PH Model
 KM Plot
 -------
 
-<img src="README_files/figure-markdown_strict/KM plot-1.png" style="display: block; margin: auto;" /><img src="README_files/figure-markdown_strict/KM plot-2.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-markdown_strict/KM-plot-1.png" style="display: block; margin: auto;" /><img src="README_files/figure-markdown_strict/KM-plot-2.png" style="display: block; margin: auto;" />
+
+Sensitivity Analyses
+--------------------
 
 <table>
 <thead>
