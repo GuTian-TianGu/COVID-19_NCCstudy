@@ -1055,6 +1055,57 @@ regression to provide estimated odds ratio (ORs), which includes the
 same covariates as the multivariate weighted Cox model. The results were
 similar.
 
+Model 1:
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">z value</th>
+<th align="right">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td align="right">-3.0045124</td>
+<td align="right">0.8110335</td>
+<td align="right">-3.7045478</td>
+<td align="right">0.0002118</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td align="right">0.0240032</td>
+<td align="right">0.0110609</td>
+<td align="right">2.1700949</td>
+<td align="right">0.0299997</td>
+</tr>
+<tr class="odd">
+<td>Male</td>
+<td align="right">-0.0068831</td>
+<td align="right">0.2832607</td>
+<td align="right">-0.0242995</td>
+<td align="right">0.9806137</td>
+</tr>
+<tr class="even">
+<td>Early_Infection</td>
+<td align="right">0.5178426</td>
+<td align="right">0.3091487</td>
+<td align="right">1.6750598</td>
+<td align="right">0.0939225</td>
+</tr>
+<tr class="odd">
+<td>Total_Chronic</td>
+<td align="right">0.3938234</td>
+<td align="right">0.1085633</td>
+<td align="right">3.6275915</td>
+<td align="right">0.0002861</td>
+</tr>
+</tbody>
+</table>
+
+Model 2:
 <table>
 <thead>
 <tr class="header">
@@ -1104,6 +1155,7 @@ similar.
 </tbody>
 </table>
 
+Model 3:
 <table>
 <thead>
 <tr class="header">
@@ -1174,51 +1226,3 @@ similar.
 </tbody>
 </table>
 
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">z value</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>(Intercept)</td>
-<td align="right">-3.0045124</td>
-<td align="right">0.8110335</td>
-<td align="right">-3.7045478</td>
-<td align="right">0.0002118</td>
-</tr>
-<tr class="even">
-<td>Age</td>
-<td align="right">0.0240032</td>
-<td align="right">0.0110609</td>
-<td align="right">2.1700949</td>
-<td align="right">0.0299997</td>
-</tr>
-<tr class="odd">
-<td>Male</td>
-<td align="right">-0.0068831</td>
-<td align="right">0.2832607</td>
-<td align="right">-0.0242995</td>
-<td align="right">0.9806137</td>
-</tr>
-<tr class="even">
-<td>Early_Infection</td>
-<td align="right">0.5178426</td>
-<td align="right">0.3091487</td>
-<td align="right">1.6750598</td>
-<td align="right">0.0939225</td>
-</tr>
-<tr class="odd">
-<td>Total_Chronic</td>
-<td align="right">0.3938234</td>
-<td align="right">0.1085633</td>
-<td align="right">3.6275915</td>
-<td align="right">0.0002861</td>
-</tr>
-</tbody>
-</table>
