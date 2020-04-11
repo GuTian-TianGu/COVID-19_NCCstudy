@@ -1,7 +1,7 @@
 History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
 ================================================================================================================
 
-Updated: Fri Apr 10 23:10:11 2020
+Updated: Fri Apr 10 23:36:50 2020
 
 [Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
 
@@ -107,7 +107,334 @@ discharged on March 3rd, by following the updates on this website.
 Summary Data
 ------------
 
-<table class=\"Rtable1\">\n<thead>\n<tr>\n<th class='rowlabel firstrow lastrow'></th>\n<th class='firstrow lastrow'><span class='stratlabel'>Survivor<br><span class='stratn'>(n=181)</span></span></th>\n<th class='firstrow lastrow'><span class='stratlabel'>Death<br><span class='stratn'>(n=94)</span></span></th>\n<th class='firstrow lastrow'>P-value</th>\n<th class='firstrow lastrow'><span class='stratlabel'>Overall<br><span class='stratn'>(n=275)</span></span></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Age<span class='varunits'> (years)</span></span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>Mean (SD)</td>\n<td>64.2 (14.7)</td>\n<td>70.7 (13.3)</td>\n<td>&lt;0.001</td>\n<td>66.4 (14.5)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Median [Min, Max]</td>\n<td class='lastrow'>67.0 [24.0, 90.0]</td>\n<td class='lastrow'>72.5 [25.0, 94.0]</td>\n<td class='lastrow'></td>\n<td class='lastrow'>68.0 [24.0, 94.0]</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Sex</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>Female</td>\n<td>64 (35.4%)</td>\n<td>38 (40.4%)</td>\n<td>0.488</td>\n<td>102 (37.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Male</td>\n<td class='lastrow'>117 (64.6%)</td>\n<td class='lastrow'>56 (59.6%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>173 (62.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Early non-intervention period</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>After 01/11/2020</td>\n<td>138 (76.2%)</td>\n<td>67 (71.3%)</td>\n<td>0.453</td>\n<td>205 (74.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Before 01/10/2020</td>\n<td class='lastrow'>43 (23.8%)</td>\n<td class='lastrow'>27 (28.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>70 (25.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>History of surgery</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>175 (96.7%)</td>\n<td>90 (95.7%)</td>\n<td>0.956</td>\n<td>265 (96.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>6 (3.3%)</td>\n<td class='lastrow'>4 (4.3%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>10 (3.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Hypertension</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>114 (63.0%)</td>\n<td>52 (55.3%)</td>\n<td>0.27</td>\n<td>166 (60.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>67 (37.0%)</td>\n<td class='lastrow'>42 (44.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>109 (39.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Coronary heart disease</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>166 (91.7%)</td>\n<td>69 (73.4%)</td>\n<td>&lt;0.001</td>\n<td>235 (85.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>15 (8.3%)</td>\n<td class='lastrow'>25 (26.6%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>40 (14.5%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Chronic_Bronchitis</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>169 (93.4%)</td>\n<td>87 (92.6%)</td>\n<td>0.998</td>\n<td>256 (93.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>12 (6.6%)</td>\n<td class='lastrow'>7 (7.4%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>19 (6.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>COPD</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>176 (97.2%)</td>\n<td>87 (92.6%)</td>\n<td>0.136</td>\n<td>263 (95.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>5 (2.8%)</td>\n<td class='lastrow'>7 (7.4%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>12 (4.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Diabetes</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>135 (74.6%)</td>\n<td>68 (72.3%)</td>\n<td>0.797</td>\n<td>203 (73.8%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>46 (25.4%)</td>\n<td class='lastrow'>26 (27.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>72 (26.2%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Cerebral_Infarction</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>173 (95.6%)</td>\n<td>83 (88.3%)</td>\n<td>0.0446</td>\n<td>256 (93.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>8 (4.4%)</td>\n<td class='lastrow'>11 (11.7%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>19 (6.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Cardiac_Failure</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>169 (93.4%)</td>\n<td>84 (89.4%)</td>\n<td>0.353</td>\n<td>253 (92.0%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>12 (6.6%)</td>\n<td class='lastrow'>10 (10.6%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>22 (8.0%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Renal_Failure</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>175 (96.7%)</td>\n<td>88 (93.6%)</td>\n<td>0.384</td>\n<td>263 (95.6%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>6 (3.3%)</td>\n<td class='lastrow'>6 (6.4%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>12 (4.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Hepatic_Failure</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>No</td>\n<td>181 (100%)</td>\n<td>91 (96.8%)</td>\n<td>0.0711</td>\n<td>272 (98.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>Yes</td>\n<td class='lastrow'>0 (0%)</td>\n<td class='lastrow'>3 (3.2%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>3 (1.1%)</td>\n</tr>\n<tr>\n<td class='rowlabel firstrow'><span class='varlabel'>Total number of comorbidities</span></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n<td class='firstrow'></td>\n</tr>\n<tr>\n<td class='rowlabel'>0</td>\n<td>68 (37.6%)</td>\n<td>21 (22.3%)</td>\n<td>&lt;0.001</td>\n<td>89 (32.4%)</td>\n</tr>\n<tr>\n<td class='rowlabel'>1</td>\n<td>50 (27.6%)</td>\n<td>18 (19.1%)</td>\n<td></td>\n<td>68 (24.7%)</td>\n</tr>\n<tr>\n<td class='rowlabel'>2</td>\n<td>39 (21.5%)</td>\n<td>22 (23.4%)</td>\n<td></td>\n<td>61 (22.2%)</td>\n</tr>\n<tr>\n<td class='rowlabel'>3</td>\n<td>16 (8.8%)</td>\n<td>14 (14.9%)</td>\n<td></td>\n<td>30 (10.9%)</td>\n</tr>\n<tr>\n<td class='rowlabel lastrow'>4</td>\n<td class='lastrow'>8 (4.4%)</td>\n<td class='lastrow'>19 (20.2%)</td>\n<td class='lastrow'></td>\n<td class='lastrow'>27 (9.8%)</td>\n</tr>\n</tbody>\n</table>\n
+    ## <table class="Rtable1">
+    ## <thead>
+    ## <tr>
+    ## <th class='rowlabel firstrow lastrow'></th>
+    ## <th class='firstrow lastrow'><span class='stratlabel'>Survivor<br><span class='stratn'>(n=181)</span></span></th>
+    ## <th class='firstrow lastrow'><span class='stratlabel'>Death<br><span class='stratn'>(n=94)</span></span></th>
+    ## <th class='firstrow lastrow'>P-value</th>
+    ## <th class='firstrow lastrow'><span class='stratlabel'>Overall<br><span class='stratn'>(n=275)</span></span></th>
+    ## </tr>
+    ## </thead>
+    ## <tbody>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Age<span class='varunits'> (years)</span></span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>Mean (SD)</td>
+    ## <td>64.2 (14.7)</td>
+    ## <td>70.7 (13.3)</td>
+    ## <td>&lt;0.001</td>
+    ## <td>66.4 (14.5)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Median [Min, Max]</td>
+    ## <td class='lastrow'>67.0 [24.0, 90.0]</td>
+    ## <td class='lastrow'>72.5 [25.0, 94.0]</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>68.0 [24.0, 94.0]</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Sex</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>Female</td>
+    ## <td>64 (35.4%)</td>
+    ## <td>38 (40.4%)</td>
+    ## <td>0.488</td>
+    ## <td>102 (37.1%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Male</td>
+    ## <td class='lastrow'>117 (64.6%)</td>
+    ## <td class='lastrow'>56 (59.6%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>173 (62.9%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Early non-intervention period</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>After 01/11/2020</td>
+    ## <td>138 (76.2%)</td>
+    ## <td>67 (71.3%)</td>
+    ## <td>0.453</td>
+    ## <td>205 (74.5%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Before 01/10/2020</td>
+    ## <td class='lastrow'>43 (23.8%)</td>
+    ## <td class='lastrow'>27 (28.7%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>70 (25.5%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>History of surgery</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>175 (96.7%)</td>
+    ## <td>90 (95.7%)</td>
+    ## <td>0.956</td>
+    ## <td>265 (96.4%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>6 (3.3%)</td>
+    ## <td class='lastrow'>4 (4.3%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>10 (3.6%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Hypertension</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>114 (63.0%)</td>
+    ## <td>52 (55.3%)</td>
+    ## <td>0.27</td>
+    ## <td>166 (60.4%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>67 (37.0%)</td>
+    ## <td class='lastrow'>42 (44.7%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>109 (39.6%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Coronary heart disease</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>166 (91.7%)</td>
+    ## <td>69 (73.4%)</td>
+    ## <td>&lt;0.001</td>
+    ## <td>235 (85.5%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>15 (8.3%)</td>
+    ## <td class='lastrow'>25 (26.6%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>40 (14.5%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Chronic_Bronchitis</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>169 (93.4%)</td>
+    ## <td>87 (92.6%)</td>
+    ## <td>0.998</td>
+    ## <td>256 (93.1%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>12 (6.6%)</td>
+    ## <td class='lastrow'>7 (7.4%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>19 (6.9%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>COPD</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>176 (97.2%)</td>
+    ## <td>87 (92.6%)</td>
+    ## <td>0.136</td>
+    ## <td>263 (95.6%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>5 (2.8%)</td>
+    ## <td class='lastrow'>7 (7.4%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>12 (4.4%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Diabetes</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>135 (74.6%)</td>
+    ## <td>68 (72.3%)</td>
+    ## <td>0.797</td>
+    ## <td>203 (73.8%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>46 (25.4%)</td>
+    ## <td class='lastrow'>26 (27.7%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>72 (26.2%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Cerebral_Infarction</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>173 (95.6%)</td>
+    ## <td>83 (88.3%)</td>
+    ## <td>0.0446</td>
+    ## <td>256 (93.1%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>8 (4.4%)</td>
+    ## <td class='lastrow'>11 (11.7%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>19 (6.9%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Cardiac_Failure</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>169 (93.4%)</td>
+    ## <td>84 (89.4%)</td>
+    ## <td>0.353</td>
+    ## <td>253 (92.0%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>12 (6.6%)</td>
+    ## <td class='lastrow'>10 (10.6%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>22 (8.0%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Renal_Failure</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>175 (96.7%)</td>
+    ## <td>88 (93.6%)</td>
+    ## <td>0.384</td>
+    ## <td>263 (95.6%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>6 (3.3%)</td>
+    ## <td class='lastrow'>6 (6.4%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>12 (4.4%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Hepatic_Failure</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>No</td>
+    ## <td>181 (100%)</td>
+    ## <td>91 (96.8%)</td>
+    ## <td>0.0711</td>
+    ## <td>272 (98.9%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>Yes</td>
+    ## <td class='lastrow'>0 (0%)</td>
+    ## <td class='lastrow'>3 (3.2%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>3 (1.1%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel firstrow'><span class='varlabel'>Total number of comorbidities</span></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## <td class='firstrow'></td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>0</td>
+    ## <td>68 (37.6%)</td>
+    ## <td>21 (22.3%)</td>
+    ## <td>&lt;0.001</td>
+    ## <td>89 (32.4%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>1</td>
+    ## <td>50 (27.6%)</td>
+    ## <td>18 (19.1%)</td>
+    ## <td></td>
+    ## <td>68 (24.7%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>2</td>
+    ## <td>39 (21.5%)</td>
+    ## <td>22 (23.4%)</td>
+    ## <td></td>
+    ## <td>61 (22.2%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel'>3</td>
+    ## <td>16 (8.8%)</td>
+    ## <td>14 (14.9%)</td>
+    ## <td></td>
+    ## <td>30 (10.9%)</td>
+    ## </tr>
+    ## <tr>
+    ## <td class='rowlabel lastrow'>4</td>
+    ## <td class='lastrow'>8 (4.4%)</td>
+    ## <td class='lastrow'>19 (20.2%)</td>
+    ## <td class='lastrow'></td>
+    ## <td class='lastrow'>27 (9.8%)</td>
+    ## </tr>
+    ## </tbody>
+    ## </table>
 
     ## 
     ##  Fisher's Exact Test for Count Data
@@ -150,6 +477,8 @@ Summary Data
     ## 
     ## data:  covid_sub$Total_Chronic_4 and covid_sub$Death
     ## X-squared = 15.69, df = 1, p-value = 7.462e-05
+
+Median followup time:
 
     ## Call: survfit(formula = Surv(time = Followup_Days, event = event_follow) ~ 
     ##     1, data = covid_sub)
