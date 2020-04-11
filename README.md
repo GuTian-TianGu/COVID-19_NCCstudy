@@ -28,6 +28,16 @@ Quick links:
 -   [KM plot](#KM-plot)
 -   [Sensitivity Analyses](#Sensitivity-analysis)
 
+Data summary
+------------
+
+There are 181 cases from 49 countries and provinces outside of Hubei,
+China. Of those 69 are known to be female (38%) and 108 are male (60%).
+The median age is about 44.5 years (IQR: 34-55.5). 81 cases are from
+Mainland China (45%), while 100 are from the rest of the world (55%). 99
+cases presented with a fever (55%).
+
+
 ## Study Design and Rationale
 
     This study performed survival analysis under a nested case-control (NCC) design to assess the roles of common comorbidities (cardiocerebrovascular, endocrine and respiratory disease, etc.) in predicting mortality for COVID-19, among patients in mainland China outside of Hubei Province. The study period was from December 18th, 2019, when the first laboratory-confirmed case was announced in China, till March 8th, 2020.
