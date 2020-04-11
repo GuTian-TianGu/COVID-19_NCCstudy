@@ -1,7 +1,7 @@
 History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
 ================================================================================================================
 
-Updated: Fri Apr 10 2020
+Updated: Apr 10 2020
 
 [Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
 
