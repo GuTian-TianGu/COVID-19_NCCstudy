@@ -20,14 +20,14 @@ cases and 181 controls).
 
 Quick links:
 
--   [Study Design and Rationale](#study-rationale)
--   [Data Collection Procedure](#data-collection)
--   [Data Summary](#table1)
--   [Weighted Cox Proportional Hazard Model-Univariate](#univariate-Cox)
+-   [Study Design and Rationale]{#study-rationale}
+-   [Data Collection Procedure]{#data-collection}
+-   [Data Summary]{#table1}
+-   [Weighted Cox Proportional Hazard Model-Univariate]{#univariate-Cox}
 -   [Weighted Cox Proportional Hazard
-    Model-Multivariate](#multivariate-Cox)
--   [KM plot](#KM-plot)
--   [Sensitivity Analyses](#Sensitivity-analysis)
+    Model-Multivariate]{#multivariate-Cox}
+-   [KM plot]{#KM-plot}
+-   [Sensitivity Analyses]{#Sensitivity-analysis}
 
 Study Design and Rationale
 --------------------------
@@ -1031,7 +1031,7 @@ Multivariate Cox PH Model
 KM Plot
 -------
 
-<img src="README_files/figure-markdown_strict/KM-plot-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-markdown_strict/KM-plot.png" style="display: block; margin: auto;" />
 
 Sensitivity Analyses
 --------------------
