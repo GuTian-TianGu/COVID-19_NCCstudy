@@ -77,7 +77,7 @@ patients were not included in this study. In addition, we defined
 “no pre-existing medical condition/comorbidity” on the
 national/provincial/municipal health commission websites. ![Figure 1:
 Patient flow diagram detailing included subjects and exclusion
-criteria.](/data/Flowchart.png)
+criteria.](/README_files/figure-markdown_strict/Flowchart.png)
 
 In the following three steps, we used the No. 214 patient as an example
 to introduce the dynamic tracking method we used to identify any missing
