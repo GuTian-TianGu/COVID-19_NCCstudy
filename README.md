@@ -20,7 +20,7 @@ cases and 181 controls).
 
 Quick links:
 
-- [Study Design and Rationale](#study-rationale)
+- [Study Design and Rationale](#study-rationale) {#study-rationale}
 - [Data Collection Procedure](#data-collection)
 - [Data Summary](#table1)
 - [Weighted Cox Proportional Hazard Model-Univariate](#univariate-Cox)
