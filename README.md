@@ -1,7 +1,7 @@
 History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
 ================================================================================================================
 
-Updated: Fri Apr 10 23:36:50 2020
+Updated: Fri Apr 10 2020
 
 [Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
 
@@ -436,6 +436,8 @@ Summary Data
      </tbody>
      </table>
 
+
+Additional Fisher's exact test & chi-squared test
 
     ## 
     ##  Fisher's Exact Test for Count Data
@@ -1029,7 +1031,7 @@ Multivariate Cox PH Model
 KM Plot
 -------
 
-<img src="README_files/figure-markdown_strict/KM-plot-1.png" style="display: block; margin: auto;" /><img src="README_files/figure-markdown_strict/KM-plot-2.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-markdown_strict/KM-plot-1.png" style="display: block; margin: auto;" />
 
 Sensitivity Analyses
 --------------------
