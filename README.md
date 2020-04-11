@@ -490,7 +490,7 @@ Median followup time:
 
 Univariate Cox PH Model
 -----------------------
-
+Age:
 <table>
 <thead>
 <tr class="header">
@@ -516,6 +516,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+Gender:
 <table>
 <thead>
 <tr class="header">
@@ -541,6 +542,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+Early period of infection before 1/22/2020:
 <table>
 <thead>
 <tr class="header">
@@ -566,6 +568,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+History of Surgery:
 <table>
 <thead>
 <tr class="header">
@@ -591,131 +594,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Hypertension</td>
-<td align="right">0.3119277</td>
-<td align="right">1.366056</td>
-<td align="right">0.2075527</td>
-<td align="right">0.2339723</td>
-<td align="right">1.333182</td>
-<td align="right">0.1824719</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CHD</td>
-<td align="right">1.433072</td>
-<td align="right">4.191554</td>
-<td align="right">0.2346989</td>
-<td align="right">0.2710545</td>
-<td align="right">5.287023</td>
-<td align="right">1e-07</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Chronic_Bronchitis</td>
-<td align="right">0.0508731</td>
-<td align="right">1.052189</td>
-<td align="right">0.3930306</td>
-<td align="right">0.4487422</td>
-<td align="right">0.1133681</td>
-<td align="right">0.9097387</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>COPD</td>
-<td align="right">0.9590383</td>
-<td align="right">2.609186</td>
-<td align="right">0.393382</td>
-<td align="right">0.3909177</td>
-<td align="right">2.4533</td>
-<td align="right">0.0141552</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Diabetes</td>
-<td align="right">0.1349872</td>
-<td align="right">1.144522</td>
-<td align="right">0.2306795</td>
-<td align="right">0.2611842</td>
-<td align="right">0.5168275</td>
-<td align="right">0.6052766</td>
-</tr>
-</tbody>
-</table>
-
+Total Number of Chronic Diseases:
 <table>
 <thead>
 <tr class="header">
@@ -741,6 +620,137 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+Hypertension:
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">coef</th>
+<th align="right">exp(coef)</th>
+<th align="right">se(coef)</th>
+<th align="right">robust se</th>
+<th align="right">z</th>
+<th align="right">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hypertension</td>
+<td align="right">0.3119277</td>
+<td align="right">1.366056</td>
+<td align="right">0.2075527</td>
+<td align="right">0.2339723</td>
+<td align="right">1.333182</td>
+<td align="right">0.1824719</td>
+</tr>
+</tbody>
+</table>
+
+CHD:
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">coef</th>
+<th align="right">exp(coef)</th>
+<th align="right">se(coef)</th>
+<th align="right">robust se</th>
+<th align="right">z</th>
+<th align="right">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CHD</td>
+<td align="right">1.433072</td>
+<td align="right">4.191554</td>
+<td align="right">0.2346989</td>
+<td align="right">0.2710545</td>
+<td align="right">5.287023</td>
+<td align="right">1e-07</td>
+</tr>
+</tbody>
+</table>
+
+Chronic Bronchitis:
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">coef</th>
+<th align="right">exp(coef)</th>
+<th align="right">se(coef)</th>
+<th align="right">robust se</th>
+<th align="right">z</th>
+<th align="right">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chronic_Bronchitis</td>
+<td align="right">0.0508731</td>
+<td align="right">1.052189</td>
+<td align="right">0.3930306</td>
+<td align="right">0.4487422</td>
+<td align="right">0.1133681</td>
+<td align="right">0.9097387</td>
+</tr>
+</tbody>
+</table>
+
+COPD:
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">coef</th>
+<th align="right">exp(coef)</th>
+<th align="right">se(coef)</th>
+<th align="right">robust se</th>
+<th align="right">z</th>
+<th align="right">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>COPD</td>
+<td align="right">0.9590383</td>
+<td align="right">2.609186</td>
+<td align="right">0.393382</td>
+<td align="right">0.3909177</td>
+<td align="right">2.4533</td>
+<td align="right">0.0141552</td>
+</tr>
+</tbody>
+</table>
+
+Diabetes:
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">coef</th>
+<th align="right">exp(coef)</th>
+<th align="right">se(coef)</th>
+<th align="right">robust se</th>
+<th align="right">z</th>
+<th align="right">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diabetes</td>
+<td align="right">0.1349872</td>
+<td align="right">1.144522</td>
+<td align="right">0.2306795</td>
+<td align="right">0.2611842</td>
+<td align="right">0.5168275</td>
+<td align="right">0.6052766</td>
+</tr>
+</tbody>
+</table>
+
+Cerebral Infarction:
 <table>
 <thead>
 <tr class="header">
@@ -766,6 +776,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+Cardiac Failure:
 <table>
 <thead>
 <tr class="header">
@@ -791,6 +802,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+Renal Failure:
 <table>
 <thead>
 <tr class="header">
@@ -816,6 +828,7 @@ Univariate Cox PH Model
 </tbody>
 </table>
 
+Hepatic Failure:
 <table>
 <thead>
 <tr class="header">
