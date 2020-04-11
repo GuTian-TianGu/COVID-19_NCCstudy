@@ -75,7 +75,9 @@ respiratory diseases) were included in the analysis. Asymptomatic
 patients were not included in this study. In addition, we defined
 “comorbidity-free patients” as those who were specifically described as
 “no pre-existing medical condition/comorbidity” on the
-national/provincial/municipal health commission websites. ![Figure 1:
+national/provincial/municipal health commission websites. 
+
+![Figure 1:
 Patient flow diagram detailing included subjects and exclusion
 criteria.](/README_files/figure-markdown_strict/Flowchart.png)
 
