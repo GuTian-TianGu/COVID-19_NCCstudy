@@ -542,7 +542,7 @@ Gender:
 </tbody>
 </table>
 
-Early period of infection before 1/22/2020:
+Early Infection before 1/22/2020:
 <table>
 <thead>
 <tr class="header">
