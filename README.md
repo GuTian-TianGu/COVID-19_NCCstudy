@@ -1,9 +1,7 @@
-[![DOI](https://doi.org/10.1101/2020.03.23.20041848)](https://doi.org/10.1101/2020.03.23.20041848)
-
 History of coronary heart disease increased the mortality rate of COVID-19 patients: a nested case-control study
 ================================================================================================================
 
-Updated: Fri Apr 10 22:34:12 2020
+Updated: Fri Apr 10 22:46:11 2020
 
 [Read the medRxiv preprint](https://doi.org/10.1101/2020.03.23.20041848)
 
@@ -22,22 +20,24 @@ cases and 181 controls).
 
 Quick links:
 
--   [Study Design and Rationale](#)
--   [Data Collection Procedure](#)
+-   [Study Design and Rationale](#study-rationale)
+-   [Data Collection Procedure](#data-collection)
 -   [Data Summary](#table1)
 -   [Weighted Cox Proportional Hazard Model-Univariate](#univariate-Cox)
 -   [Weighted Cox Proportional Hazard
     Model-Multivariate](#multivariate-Cox)
--   [KM plot](#comparison-to-other-estimates)
--   [Sensitivity Analyses](#comparison-to-other-estimates)
+-   [KM plot](#KM-plot)
+-   [Sensitivity Analyses](#Sensitivity-analysis)
 
 Study Design and Rationale
 --------------------------
+
     This study performed survival analysis under a nested case-control (NCC) design to assess the roles of common comorbidities (cardiocerebrovascular, endocrine and respiratory disease, etc.) in predicting mortality for COVID-19, among patients in mainland China outside of Hubei Province. The study period was from December 18th, 2019, when the first laboratory-confirmed case was announced in China, till March 8th, 2020.
     The study cohort was defined as all the publicly reported confirmed COVID-19 patients outside of Hubei Province in mainland China between the study period. During this period, 112 deaths outside of Hubei Province were reported by the National Health Committee of China, and 18 were excluded from the present study due to missingness of important clinical information. A total of 448 publicly reported laboratory-confirmed COVID-19 cases (94 deaths and 354 survivors) were initially collected. The data collection procedure was blinded to patient comorbidity information. All deaths were included as cases, and each case was matched with up to three controls on gender and age ± 1 year old (94 cases and 181 controls). The sample distribution across all 32 province-level regions in mainland China is presented in Appendix Table A1.
 
 Data Collection Procedure
 -------------------------
+
     We routinely searched for daily news and public health reports on confirmed COVID-19 cases in all areas in mainland China outside of Hubei Province. Patients’ clinical and comorbidity characteristics were recorded and doubly confirmed by national/provincial/municipal health commission websites, the official COVID-19 data reporting websites in China. Follow-up time was defined as the duration from the date of disease onset till the end of observation on March 8th or when the participant died, whichever came first. For each eligible patient, we followed local reports to update their survival status until the end of follow-up time.
     As illustrated in Figure 1,  the inclusion criterion was publicly reported COVID-19 patients who had complete information on basic demographics (age, gender and region), disease onset date--the first time a patient became symptomatic, and history of comorbidities (include but not limited to hypertension, cardiovascular disease, diabetes and respiratory diseases) were included in the analysis. Asymptomatic patients were not included in this study. In addition, we defined “comorbidity-free patients” as those who were specifically described as “no pre-existing medical condition/comorbidity” on the national/provincial/municipal health commission websites.
     ![Figure 1: Patient flow diagram detailing included subjects and exclusion criteria.](/data/Flowchart.png)
