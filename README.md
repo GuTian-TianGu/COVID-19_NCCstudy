@@ -50,9 +50,7 @@ laboratory-confirmed COVID-19 cases (94 deaths and 354 survivors) were
 initially collected. The data collection procedure was blinded to
 patient comorbidity information. All deaths were included as cases, and
 each case was matched with up to three controls on gender and age ± 1
-year old (94 cases and 181 controls). The sample distribution across all
-32 province-level regions in mainland China is presented in Appendix
-Table A1.
+year old (94 cases and 181 controls). 
 
 Data Collection Procedure
 -------------------------
