@@ -998,9 +998,9 @@ Model 3:
 
 KM Plot
 -------
-
-    ## quartz_off_screen 
-    ##                 2
+![Figure 1:
+Patient flow diagram detailing included subjects and exclusion
+criteria.](/README_files/figure-markdown_strict/KM-plot-1.png)
 
 Sensitivity Analyses
 --------------------
