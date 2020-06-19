@@ -24,9 +24,7 @@ covid = read.csv('/data/Publicly reported confirmed cases data.csv')
 
 #creating new variables
 covid$Male = 2- covid$Sex
-covid$Chronic = covid$Hypertension + covid$CHD + covid$Chronic_Bronchitis + covid$Other_Lung_Disease + covid$Diabetes + covid$Cerebral_Infarction + covid$Hepatic_Failure + covid$Cardiac_Failure + covid$Renal_Failure + covid$COPD + covid$Other_Disease
-covid$Total_Chronic = ifelse(covid$Chronic >= 4, 4, covid$Chronic)
-covid$Chronic = ifelse(covid$Chronic > 0, 1, 0)
+covid$ComorbidityScore = covid$Hypertension + covid$CHD + covid$Chronic_Bronchitis + covid$Other_Lung_Disease + covid$Diabetes + covid$Cerebral_Infarction + covid$Hepatic_Failure + covid$Cardiac_Failure + covid$Renal_Failure + covid$COPD
 
 #creating new time variables
 timeline = data.frame('time'=c('1','2','3','4'), start = c('12-13-2019','01-11-2020','01-23-2020','02-02-2020'), end = c('01-10-2020','01-22-2020','02-01-2020','02-18-2020'))
@@ -149,11 +147,9 @@ label(covid_table$CHD) ='Coronary heart disease'
 label(covid_table$Chronic_Bronchitis) ='Chronic_Bronchitis'
 label(covid_table$Other_Lung_Disease) ='Lung disease'
 label(covid_table$Diabetes) ='Diabetes'
-label(covid_table$Total_Chronic) = 'Total number of comorbidities'
+label(covid_table$ComorbidityScore) = 'Comorbidity Score'
 
-covid_table$`Total number of comorbidities` = covid_table$Total_Chronic
-
-table_1 = table1::table1(~ Age+Male+Early_Infection+History_of_Surgery+Hypertension+CHD+Chronic_Bronchitis+COPD+Diabetes+Cerebral_Infarction +Cardiac_Failure+Renal_Failure+Hepatic_Failure+Total_Chronic|Death, data=covid_table,droplevels=F, render=rndr, render.strat=rndr.strat)
+table_1 = table1::table1(~ Age+Male+Early_Infection+History_of_Surgery+Hypertension+CHD+Chronic_Bronchitis+COPD+Diabetes+Cerebral_Infarction +Cardiac_Failure+Renal_Failure+Hepatic_Failure+ComorbidityScore|Death, data=covid_table,droplevels=F, render=rndr, render.strat=rndr.strat)
 
 print(table_1)
 ```
@@ -200,8 +196,6 @@ knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~CO
 
 knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Diabetes, data = covid_sub, weights = 1/KMP, robust=TRUE))))
 
-knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Total_Chronic, data = covid_sub, weights = 1/KMP, robust=TRUE))))
-
 knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Cerebral_Infarction, data = covid_sub, weights = 1/KMP, robust=TRUE))))
 
 knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Cardiac_Failure, data = covid_sub, weights = 1/KMP, robust=TRUE))))
@@ -209,13 +203,15 @@ knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Ca
 knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Renal_Failure, data = covid_sub, weights = 1/KMP, robust=TRUE))))
 
 knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~Hepatic_Failure, data = covid_sub, weights = 1/KMP, robust=TRUE))))
+
+knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death)~ComorbidityScore, data = covid_sub, weights = 1/KMP, robust=TRUE))))
 ```
 
 ## Multivariate Cox PH Model {#multivariate-Cox}
 Model 1:
 ```{r multivariate-Cox, echo=FALSE, message=FALSE, warning=FALSE}
 
-knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death) ~ Age + Male + Early_Infection + Total_Chronic,
+knitr::kable(coefficients(summary(coxph(Surv(time=Followup_Days, event=Death) ~ Age + Male + Early_Infection + ComorbidityScore,
               data = covid_sub,
               weights = 1/KMP,
               robust=TRUE))))
