@@ -391,52 +391,31 @@ Summary Data
      <td class='lastrow'>3 (1.1%)</td>
      </tr>
      <tr>
-     <td class='rowlabel firstrow'><span class='varlabel'>Total number of comorbidities</span></td>
+     <td class='rowlabel firstrow'><span class='varlabel'>Comorbidity Score</span></td>
      <td class='firstrow'></td>
      <td class='firstrow'></td>
      <td class='firstrow'></td>
      <td class='firstrow'></td>
      </tr>
      <tr>
-     <td class='rowlabel'>0</td>
-     <td>68 (37.6%)</td>
-     <td>21 (22.3%)</td>
+     <td class='rowlabel'>Mean (SD)</td>
+     <td>1.21 (1.40)</td>
+     <td>2.15 (2.17)</td>
      <td>&lt;0.001</td>
-     <td>89 (32.4%)</td>
+     <td>1.53 (1.76)</td>
      </tr>
      <tr>
-     <td class='rowlabel'>1</td>
-     <td>50 (27.6%)</td>
-     <td>18 (19.1%)</td>
-     <td></td>
-     <td>68 (24.7%)</td>
-     </tr>
-     <tr>
-     <td class='rowlabel'>2</td>
-     <td>39 (21.5%)</td>
-     <td>22 (23.4%)</td>
-     <td></td>
-     <td>61 (22.2%)</td>
-     </tr>
-     <tr>
-     <td class='rowlabel'>3</td>
-     <td>16 (8.8%)</td>
-     <td>14 (14.9%)</td>
-     <td></td>
-     <td>30 (10.9%)</td>
-     </tr>
-     <tr>
-     <td class='rowlabel lastrow'>4</td>
-     <td class='lastrow'>8 (4.4%)</td>
-     <td class='lastrow'>19 (20.2%)</td>
+     <td class='rowlabel lastrow'>Median [Min, Max]</td>
+     <td class='lastrow'>1.00 [0.00, 11.0]</td>
+     <td class='lastrow'>2.00 [0.00, 16.0]</td>
      <td class='lastrow'></td>
-     <td class='lastrow'>27 (9.8%)</td>
+     <td class='lastrow'>1.00 [0.00, 16.0]</td>
      </tr>
      </tbody>
      </table>
 
 
-Additional Fisher's exact test & chi-squared test
+Additional Fisher’s exact test & Mann–Whitney U test
 
     ## 
     ##  Fisher's Exact Test for Count Data
@@ -451,34 +430,18 @@ Additional Fisher's exact test & chi-squared test
     ##   1.294993
 
     ## 
-    ##  Pearson's Chi-squared test with Yates' continuity correction
+    ##  Wilcoxon rank sum test with continuity correction
     ## 
-    ## data:  covid_sub$Total_Chronic_0 and covid_sub$Death
-    ## X-squared = 5.8775, df = 1, p-value = 0.01534
+    ## data:  Age by Death
+    ## W = 6255.5, p-value = 0.0003183
+    ## alternative hypothesis: true location shift is not equal to 0
 
     ## 
-    ##  Pearson's Chi-squared test with Yates' continuity correction
+    ##  Wilcoxon rank sum test with continuity correction
     ## 
-    ## data:  covid_sub$Total_Chronic_1 and covid_sub$Death
-    ## X-squared = 1.954, df = 1, p-value = 0.1622
-
-    ## 
-    ##  Pearson's Chi-squared test with Yates' continuity correction
-    ## 
-    ## data:  covid_sub$Total_Chronic_2 and covid_sub$Death
-    ## X-squared = 0.039451, df = 1, p-value = 0.8426
-
-    ## 
-    ##  Pearson's Chi-squared test with Yates' continuity correction
-    ## 
-    ## data:  covid_sub$Total_Chronic_3 and covid_sub$Death
-    ## X-squared = 1.7517, df = 1, p-value = 0.1857
-
-    ## 
-    ##  Pearson's Chi-squared test with Yates' continuity correction
-    ## 
-    ## data:  covid_sub$Total_Chronic_4 and covid_sub$Death
-    ## X-squared = 15.69, df = 1, p-value = 7.462e-05
+    ## data:  ComorbidityScore by Death
+    ## W = 5940.5, p-value = 2.296e-05
+    ## alternative hypothesis: true location shift is not equal to 0
 
 Median followup time:
 
@@ -594,7 +557,7 @@ History of Surgery:
 </tbody>
 </table>
 
-Total Number of Chronic Diseases:
+Comorbidity Score:
 <table>
 <thead>
 <tr class="header">
@@ -609,7 +572,7 @@ Total Number of Chronic Diseases:
 </thead>
 <tbody>
 <tr class="odd">
-<td>Total_Chronic</td>
+<td>ComorbidityScore</td>
 <td align="right">0.4932483</td>
 <td align="right">1.637627</td>
 <td align="right">0.0790424</td>
@@ -1109,11 +1072,13 @@ Model 1:
 <td align="right">0.0939225</td>
 </tr>
 <tr class="odd">
-<td>Total_Chronic</td>
-<td align="right">0.3938234</td>
-<td align="right">0.1085633</td>
-<td align="right">3.6275915</td>
-<td align="right">0.0002861</td>
+<td>ComorbidityScore</td>
+<td style="text-align: right;">0.1221022</td>
+<td style="text-align: right;">1.129870</td>
+<td style="text-align: right;">0.0380384</td>
+<td style="text-align: right;">0.0397651</td>
+<td style="text-align: right;">3.0705854</td>
+<td style="text-align: right;">0.0021364</td>
 </tr>
 </tbody>
 </table>
