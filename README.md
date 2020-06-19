@@ -453,366 +453,353 @@ Median followup time:
 
 Univariate Cox PH Model
 -----------------------
-Age:
+
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Age</td>
-<td align="right">0.0486394</td>
-<td align="right">1.049842</td>
-<td align="right">0.0086594</td>
-<td align="right">0.0100961</td>
-<td align="right">4.817644</td>
-<td align="right">1.5e-06</td>
+<td style="text-align: right;">0.0486394</td>
+<td style="text-align: right;">1.049842</td>
+<td style="text-align: right;">0.0086594</td>
+<td style="text-align: right;">0.0100961</td>
+<td style="text-align: right;">4.817644</td>
+<td style="text-align: right;">1.5e-06</td>
 </tr>
 </tbody>
 </table>
 
-Gender:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Male</td>
-<td align="right">-0.2732098</td>
-<td align="right">0.7609332</td>
-<td align="right">0.2103793</td>
-<td align="right">0.2329391</td>
-<td align="right">-1.172881</td>
-<td align="right">0.2408437</td>
+<td style="text-align: right;">-0.2732098</td>
+<td style="text-align: right;">0.7609332</td>
+<td style="text-align: right;">0.2103793</td>
+<td style="text-align: right;">0.2329391</td>
+<td style="text-align: right;">-1.172881</td>
+<td style="text-align: right;">0.2408437</td>
 </tr>
 </tbody>
 </table>
 
-Early Infection before 1/22/2020:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Early_Infection</td>
-<td align="right">0.1115256</td>
-<td align="right">1.117982</td>
-<td align="right">0.2307952</td>
-<td align="right">0.2498649</td>
-<td align="right">0.4463437</td>
-<td align="right">0.655349</td>
+<td style="text-align: right;">0.1115256</td>
+<td style="text-align: right;">1.117982</td>
+<td style="text-align: right;">0.2307952</td>
+<td style="text-align: right;">0.2498649</td>
+<td style="text-align: right;">0.4463437</td>
+<td style="text-align: right;">0.655349</td>
 </tr>
 </tbody>
 </table>
 
-History of Surgery:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>History_of_Surgery</td>
-<td align="right">0.5353023</td>
-<td align="right">1.707964</td>
-<td align="right">0.5111814</td>
-<td align="right">0.5562612</td>
-<td align="right">0.9623218</td>
-<td align="right">0.335888</td>
+<td style="text-align: right;">0.5353023</td>
+<td style="text-align: right;">1.707964</td>
+<td style="text-align: right;">0.5111814</td>
+<td style="text-align: right;">0.5562612</td>
+<td style="text-align: right;">0.9623218</td>
+<td style="text-align: right;">0.335888</td>
 </tr>
 </tbody>
 </table>
 
-Comorbidity Score:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ComorbidityScore</td>
-<td align="right">0.4932483</td>
-<td align="right">1.637627</td>
-<td align="right">0.0790424</td>
-<td align="right">0.087902</td>
-<td align="right">5.611346</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-
-Hypertension:
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Hypertension</td>
-<td align="right">0.3119277</td>
-<td align="right">1.366056</td>
-<td align="right">0.2075527</td>
-<td align="right">0.2339723</td>
-<td align="right">1.333182</td>
-<td align="right">0.1824719</td>
+<td style="text-align: right;">0.3119277</td>
+<td style="text-align: right;">1.366056</td>
+<td style="text-align: right;">0.2075527</td>
+<td style="text-align: right;">0.2339723</td>
+<td style="text-align: right;">1.333182</td>
+<td style="text-align: right;">0.1824719</td>
 </tr>
 </tbody>
 </table>
 
-CHD:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>CHD</td>
-<td align="right">1.433072</td>
-<td align="right">4.191554</td>
-<td align="right">0.2346989</td>
-<td align="right">0.2710545</td>
-<td align="right">5.287023</td>
-<td align="right">1e-07</td>
+<td style="text-align: right;">1.433072</td>
+<td style="text-align: right;">4.191554</td>
+<td style="text-align: right;">0.2346989</td>
+<td style="text-align: right;">0.2710545</td>
+<td style="text-align: right;">5.287023</td>
+<td style="text-align: right;">1e-07</td>
 </tr>
 </tbody>
 </table>
 
-Chronic Bronchitis:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Chronic_Bronchitis</td>
-<td align="right">0.0508731</td>
-<td align="right">1.052189</td>
-<td align="right">0.3930306</td>
-<td align="right">0.4487422</td>
-<td align="right">0.1133681</td>
-<td align="right">0.9097387</td>
+<td style="text-align: right;">0.0508731</td>
+<td style="text-align: right;">1.052189</td>
+<td style="text-align: right;">0.3930306</td>
+<td style="text-align: right;">0.4487422</td>
+<td style="text-align: right;">0.1133681</td>
+<td style="text-align: right;">0.9097387</td>
 </tr>
 </tbody>
 </table>
 
-COPD:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>COPD</td>
-<td align="right">0.9590383</td>
-<td align="right">2.609186</td>
-<td align="right">0.393382</td>
-<td align="right">0.3909177</td>
-<td align="right">2.4533</td>
-<td align="right">0.0141552</td>
+<td style="text-align: right;">0.9590383</td>
+<td style="text-align: right;">2.609186</td>
+<td style="text-align: right;">0.393382</td>
+<td style="text-align: right;">0.3909177</td>
+<td style="text-align: right;">2.4533</td>
+<td style="text-align: right;">0.0141552</td>
 </tr>
 </tbody>
 </table>
 
-Diabetes:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Diabetes</td>
-<td align="right">0.1349872</td>
-<td align="right">1.144522</td>
-<td align="right">0.2306795</td>
-<td align="right">0.2611842</td>
-<td align="right">0.5168275</td>
-<td align="right">0.6052766</td>
+<td style="text-align: right;">0.1349872</td>
+<td style="text-align: right;">1.144522</td>
+<td style="text-align: right;">0.2306795</td>
+<td style="text-align: right;">0.2611842</td>
+<td style="text-align: right;">0.5168275</td>
+<td style="text-align: right;">0.6052766</td>
 </tr>
 </tbody>
 </table>
 
-Cerebral Infarction:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ComorbidityScore</td>
+<td style="text-align: right;">0.1919135</td>
+<td style="text-align: right;">1.211566</td>
+<td style="text-align: right;">0.0324156</td>
+<td style="text-align: right;">0.0391562</td>
+<td style="text-align: right;">4.90123</td>
+<td style="text-align: right;">1e-06</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Cerebral_Infarction</td>
-<td align="right">1.049599</td>
-<td align="right">2.856504</td>
-<td align="right">0.3219388</td>
-<td align="right">0.3600373</td>
-<td align="right">2.91525</td>
-<td align="right">0.003554</td>
+<td style="text-align: right;">1.049599</td>
+<td style="text-align: right;">2.856504</td>
+<td style="text-align: right;">0.3219388</td>
+<td style="text-align: right;">0.3600373</td>
+<td style="text-align: right;">2.91525</td>
+<td style="text-align: right;">0.003554</td>
 </tr>
 </tbody>
 </table>
 
-Cardiac Failure:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Cardiac_Failure</td>
-<td align="right">0.6132745</td>
-<td align="right">1.846468</td>
-<td align="right">0.3346376</td>
-<td align="right">0.3758117</td>
-<td align="right">1.631866</td>
-<td align="right">0.1027076</td>
+<td style="text-align: right;">0.6132745</td>
+<td style="text-align: right;">1.846468</td>
+<td style="text-align: right;">0.3346376</td>
+<td style="text-align: right;">0.3758117</td>
+<td style="text-align: right;">1.631866</td>
+<td style="text-align: right;">0.1027076</td>
 </tr>
 </tbody>
 </table>
 
-Renal Failure:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Renal_Failure</td>
-<td align="right">0.8310933</td>
-<td align="right">2.295827</td>
-<td align="right">0.4233677</td>
-<td align="right">0.4904419</td>
-<td align="right">1.69458</td>
-<td align="right">0.0901551</td>
+<td style="text-align: right;">0.8310933</td>
+<td style="text-align: right;">2.295827</td>
+<td style="text-align: right;">0.4233677</td>
+<td style="text-align: right;">0.4904419</td>
+<td style="text-align: right;">1.69458</td>
+<td style="text-align: right;">0.0901551</td>
 </tr>
 </tbody>
 </table>
 
-Hepatic Failure:
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Hepatic_Failure</td>
-<td align="right">2.11074</td>
-<td align="right">8.254343</td>
-<td align="right">0.5915688</td>
-<td align="right">0.288125</td>
-<td align="right">7.325777</td>
-<td align="right">0</td>
+<td style="text-align: right;">2.11074</td>
+<td style="text-align: right;">8.254343</td>
+<td style="text-align: right;">0.5915688</td>
+<td style="text-align: right;">0.288125</td>
+<td style="text-align: right;">7.325777</td>
+<td style="text-align: right;">0</td>
 </tr>
 </tbody>
 </table>
@@ -826,252 +813,43 @@ Model 1:
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Age</td>
-<td align="right">0.0381612</td>
-<td align="right">1.038899</td>
-<td align="right">0.0093609</td>
-<td align="right">0.0108879</td>
-<td align="right">3.5049183</td>
-<td align="right">0.0004567</td>
+<td style="text-align: right;">0.0423086</td>
+<td style="text-align: right;">1.043216</td>
+<td style="text-align: right;">0.0091587</td>
+<td style="text-align: right;">0.0105362</td>
+<td style="text-align: right;">4.0155648</td>
+<td style="text-align: right;">0.0000593</td>
 </tr>
 <tr class="even">
 <td>Male</td>
-<td align="right">0.0763042</td>
-<td align="right">1.079291</td>
-<td align="right">0.2133736</td>
-<td align="right">0.2298045</td>
-<td align="right">0.3320397</td>
-<td align="right">0.7398593</td>
+<td style="text-align: right;">0.1056608</td>
+<td style="text-align: right;">1.111445</td>
+<td style="text-align: right;">0.2142733</td>
+<td style="text-align: right;">0.2318977</td>
+<td style="text-align: right;">0.4556353</td>
+<td style="text-align: right;">0.6486522</td>
 </tr>
 <tr class="odd">
 <td>Early_Infection</td>
-<td align="right">0.2667355</td>
-<td align="right">1.305695</td>
-<td align="right">0.2326670</td>
-<td align="right">0.2499336</td>
-<td align="right">1.0672253</td>
-<td align="right">0.2858701</td>
+<td style="text-align: right;">0.2735787</td>
+<td style="text-align: right;">1.314661</td>
+<td style="text-align: right;">0.2341008</td>
+<td style="text-align: right;">0.2458234</td>
+<td style="text-align: right;">1.1129073</td>
+<td style="text-align: right;">0.2657482</td>
 </tr>
 <tr class="even">
-<td>Total_Chronic</td>
-<td align="right">0.3563132</td>
-<td align="right">1.428055</td>
-<td align="right">0.0832220</td>
-<td align="right">0.0904701</td>
-<td align="right">3.9384649</td>
-<td align="right">0.0000820</td>
-</tr>
-</tbody>
-</table>
-
-Model 2:
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Age</td>
-<td align="right">0.0425327</td>
-<td align="right">1.043450</td>
-<td align="right">0.0090123</td>
-<td align="right">0.0104228</td>
-<td align="right">4.0807517</td>
-<td align="right">0.0000449</td>
-</tr>
-<tr class="even">
-<td>Male</td>
-<td align="right">0.0852805</td>
-<td align="right">1.089023</td>
-<td align="right">0.2134930</td>
-<td align="right">0.2275641</td>
-<td align="right">0.3747538</td>
-<td align="right">0.7078435</td>
-</tr>
-<tr class="odd">
-<td>Early_Infection</td>
-<td align="right">0.1779544</td>
-<td align="right">1.194771</td>
-<td align="right">0.2318960</td>
-<td align="right">0.2490904</td>
-<td align="right">0.7144171</td>
-<td align="right">0.4749693</td>
-</tr>
-<tr class="even">
-<td>CHD</td>
-<td align="right">1.0732430</td>
-<td align="right">2.924849</td>
-<td align="right">0.2428424</td>
-<td align="right">0.2652509</td>
-<td align="right">4.0461433</td>
-<td align="right">0.0000521</td>
-</tr>
-</tbody>
-</table>
-
-Model 3:
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">coef</th>
-<th align="right">exp(coef)</th>
-<th align="right">se(coef)</th>
-<th align="right">robust se</th>
-<th align="right">z</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Age</td>
-<td align="right">0.0372684</td>
-<td align="right">1.0379716</td>
-<td align="right">0.0092484</td>
-<td align="right">0.0107136</td>
-<td align="right">3.4786102</td>
-<td align="right">0.0005040</td>
-</tr>
-<tr class="even">
-<td>Male</td>
-<td align="right">-0.0027273</td>
-<td align="right">0.9972764</td>
-<td align="right">0.2186409</td>
-<td align="right">0.2396018</td>
-<td align="right">-0.0113828</td>
-<td align="right">0.9909181</td>
-</tr>
-<tr class="odd">
-<td>Early_Infection</td>
-<td align="right">0.1904524</td>
-<td align="right">1.2097968</td>
-<td align="right">0.2338193</td>
-<td align="right">0.2500363</td>
-<td align="right">0.7616992</td>
-<td align="right">0.4462396</td>
-</tr>
-<tr class="even">
-<td>CHD</td>
-<td align="right">1.1012042</td>
-<td align="right">3.0077858</td>
-<td align="right">0.2423555</td>
-<td align="right">0.2575034</td>
-<td align="right">4.2764651</td>
-<td align="right">0.0000190</td>
-</tr>
-<tr class="odd">
-<td>Cerebral_Infarction</td>
-<td align="right">0.6419621</td>
-<td align="right">1.9002055</td>
-<td align="right">0.3341922</td>
-<td align="right">0.3592212</td>
-<td align="right">1.7870938</td>
-<td align="right">0.0739223</td>
-</tr>
-<tr class="even">
-<td>COPD</td>
-<td align="right">0.6166034</td>
-<td align="right">1.8526247</td>
-<td align="right">0.4154428</td>
-<td align="right">0.3734279</td>
-<td align="right">1.6511980</td>
-<td align="right">0.0986982</td>
-</tr>
-<tr class="odd">
-<td>Renal_Failure</td>
-<td align="right">0.7046864</td>
-<td align="right">2.0232120</td>
-<td align="right">0.4360997</td>
-<td align="right">0.4684805</td>
-<td align="right">1.5041956</td>
-<td align="right">0.1325310</td>
-</tr>
-</tbody>
-</table>
-
-KM Plot
--------
-
-<img src="README_files/figure-markdown_strict/KM-plot-1.png" alt="Estimated survival probability over time from the adjusted Cox proportional hazard model for an example patient profile (65-year-old female without CHD [dashed line] or with CHD [solid line], who had no other comorbidities). The estimated 30-day survival probability was 0.53 (95% CI [0.34-0.82]) for patients with pre-existing CHD, while 0.85 (95% CI [0.79-0.91]) for those without (p&lt;0.001). CHD=coronary heart disease."  />
-<p class="caption">
-Estimated survival probability over time from the adjusted Cox
-proportional hazard model for an example patient profile (65-year-old
-female without CHD \[dashed line\] or with CHD \[solid line\], who had
-no other comorbidities). The estimated 30-day survival probability was
-0.53 (95% CI \[0.34-0.82\]) for patients with pre-existing CHD, while
-0.85 (95% CI \[0.79-0.91\]) for those without (p&lt;0.001). CHD=coronary
-heart disease.
-</p>
-
-Sensitivity Analyses
---------------------
-
-Sensitivity analysis was performed using multivariate logistic
-regression to provide estimated odds ratio (ORs), which includes the
-same covariates as the multivariate weighted Cox model. The results were
-similar.
-
-Model 1:
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">z value</th>
-<th align="right">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>(Intercept)</td>
-<td align="right">-3.0045124</td>
-<td align="right">0.8110335</td>
-<td align="right">-3.7045478</td>
-<td align="right">0.0002118</td>
-</tr>
-<tr class="even">
-<td>Age</td>
-<td align="right">0.0240032</td>
-<td align="right">0.0110609</td>
-<td align="right">2.1700949</td>
-<td align="right">0.0299997</td>
-</tr>
-<tr class="odd">
-<td>Male</td>
-<td align="right">-0.0068831</td>
-<td align="right">0.2832607</td>
-<td align="right">-0.0242995</td>
-<td align="right">0.9806137</td>
-</tr>
-<tr class="even">
-<td>Early_Infection</td>
-<td align="right">0.5178426</td>
-<td align="right">0.3091487</td>
-<td align="right">1.6750598</td>
-<td align="right">0.0939225</td>
-</tr>
-<tr class="odd">
 <td>ComorbidityScore</td>
 <td style="text-align: right;">0.1221022</td>
 <td style="text-align: right;">1.129870</td>
@@ -1084,123 +862,318 @@ Model 1:
 </table>
 
 Model 2:
+
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">z value</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>(Intercept)</td>
-<td align="right">-2.9553523</td>
-<td align="right">0.8053584</td>
-<td align="right">-3.6696111</td>
-<td align="right">0.0002429</td>
-</tr>
-<tr class="even">
 <td>Age</td>
-<td align="right">0.0289566</td>
-<td align="right">0.0106839</td>
-<td align="right">2.7103099</td>
-<td align="right">0.0067220</td>
-</tr>
-<tr class="odd">
-<td>Male</td>
-<td align="right">0.0466922</td>
-<td align="right">0.2820745</td>
-<td align="right">0.1655316</td>
-<td align="right">0.8685256</td>
+<td style="text-align: right;">0.0425327</td>
+<td style="text-align: right;">1.043450</td>
+<td style="text-align: right;">0.0090123</td>
+<td style="text-align: right;">0.0104228</td>
+<td style="text-align: right;">4.0807517</td>
+<td style="text-align: right;">0.0000449</td>
 </tr>
 <tr class="even">
-<td>Early_Infection</td>
-<td align="right">0.4753632</td>
-<td align="right">0.3048857</td>
-<td align="right">1.5591523</td>
-<td align="right">0.1189603</td>
+<td>Male</td>
+<td style="text-align: right;">0.0852805</td>
+<td style="text-align: right;">1.089023</td>
+<td style="text-align: right;">0.2134930</td>
+<td style="text-align: right;">0.2275641</td>
+<td style="text-align: right;">0.3747538</td>
+<td style="text-align: right;">0.7078435</td>
 </tr>
 <tr class="odd">
+<td>Early_Infection</td>
+<td style="text-align: right;">0.1779544</td>
+<td style="text-align: right;">1.194771</td>
+<td style="text-align: right;">0.2318960</td>
+<td style="text-align: right;">0.2490904</td>
+<td style="text-align: right;">0.7144171</td>
+<td style="text-align: right;">0.4749693</td>
+</tr>
+<tr class="even">
 <td>CHD</td>
-<td align="right">1.1833551</td>
-<td align="right">0.3711950</td>
-<td align="right">3.1879609</td>
-<td align="right">0.0014328</td>
+<td style="text-align: right;">1.0732430</td>
+<td style="text-align: right;">2.924849</td>
+<td style="text-align: right;">0.2428424</td>
+<td style="text-align: right;">0.2652509</td>
+<td style="text-align: right;">4.0461433</td>
+<td style="text-align: right;">0.0000521</td>
 </tr>
 </tbody>
 </table>
 
 Model 3:
+
 <table>
 <thead>
 <tr class="header">
 <th></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">z value</th>
-<th align="right">Pr(&gt;|z|)</th>
+<th style="text-align: right;">coef</th>
+<th style="text-align: right;">exp(coef)</th>
+<th style="text-align: right;">se(coef)</th>
+<th style="text-align: right;">robust se</th>
+<th style="text-align: right;">z</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Age</td>
+<td style="text-align: right;">0.0372684</td>
+<td style="text-align: right;">1.0379716</td>
+<td style="text-align: right;">0.0092484</td>
+<td style="text-align: right;">0.0107136</td>
+<td style="text-align: right;">3.4786102</td>
+<td style="text-align: right;">0.0005040</td>
+</tr>
+<tr class="even">
+<td>Male</td>
+<td style="text-align: right;">-0.0027273</td>
+<td style="text-align: right;">0.9972764</td>
+<td style="text-align: right;">0.2186409</td>
+<td style="text-align: right;">0.2396018</td>
+<td style="text-align: right;">-0.0113828</td>
+<td style="text-align: right;">0.9909181</td>
+</tr>
+<tr class="odd">
+<td>Early_Infection</td>
+<td style="text-align: right;">0.1904524</td>
+<td style="text-align: right;">1.2097968</td>
+<td style="text-align: right;">0.2338193</td>
+<td style="text-align: right;">0.2500363</td>
+<td style="text-align: right;">0.7616992</td>
+<td style="text-align: right;">0.4462396</td>
+</tr>
+<tr class="even">
+<td>CHD</td>
+<td style="text-align: right;">1.1012042</td>
+<td style="text-align: right;">3.0077858</td>
+<td style="text-align: right;">0.2423555</td>
+<td style="text-align: right;">0.2575034</td>
+<td style="text-align: right;">4.2764651</td>
+<td style="text-align: right;">0.0000190</td>
+</tr>
+<tr class="odd">
+<td>Cerebral_Infarction</td>
+<td style="text-align: right;">0.6419621</td>
+<td style="text-align: right;">1.9002055</td>
+<td style="text-align: right;">0.3341922</td>
+<td style="text-align: right;">0.3592212</td>
+<td style="text-align: right;">1.7870938</td>
+<td style="text-align: right;">0.0739223</td>
+</tr>
+<tr class="even">
+<td>COPD</td>
+<td style="text-align: right;">0.6166034</td>
+<td style="text-align: right;">1.8526247</td>
+<td style="text-align: right;">0.4154428</td>
+<td style="text-align: right;">0.3734279</td>
+<td style="text-align: right;">1.6511980</td>
+<td style="text-align: right;">0.0986982</td>
+</tr>
+<tr class="odd">
+<td>Renal_Failure</td>
+<td style="text-align: right;">0.7046864</td>
+<td style="text-align: right;">2.0232120</td>
+<td style="text-align: right;">0.4360997</td>
+<td style="text-align: right;">0.4684805</td>
+<td style="text-align: right;">1.5041956</td>
+<td style="text-align: right;">0.1325310</td>
+</tr>
+</tbody>
+</table>
+
+KM Plot
+-------
+
+    ## quartz_off_screen 
+    ##                 2
+
+Sensitivity Analyses
+--------------------
+
+Sensitivity analysis was performed using multivariate logistic
+regression to provide estimated odds ratio (ORs), which includes the
+same covariates as the multivariate weighted Cox model. The results were
+similar.
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Estimate</th>
+<th style="text-align: right;">Std. Error</th>
+<th style="text-align: right;">z value</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>(Intercept)</td>
-<td align="right">-2.5960546</td>
-<td align="right">0.8248978</td>
-<td align="right">-3.1471228</td>
-<td align="right">0.0016489</td>
+<td style="text-align: right;">-2.9553523</td>
+<td style="text-align: right;">0.8053584</td>
+<td style="text-align: right;">-3.6696111</td>
+<td style="text-align: right;">0.0002429</td>
 </tr>
 <tr class="even">
 <td>Age</td>
-<td align="right">0.0220286</td>
-<td align="right">0.0111294</td>
-<td align="right">1.9793162</td>
-<td align="right">0.0477804</td>
+<td style="text-align: right;">0.0289566</td>
+<td style="text-align: right;">0.0106839</td>
+<td style="text-align: right;">2.7103099</td>
+<td style="text-align: right;">0.0067220</td>
 </tr>
 <tr class="odd">
 <td>Male</td>
-<td align="right">-0.0416592</td>
-<td align="right">0.2890719</td>
-<td align="right">-0.1441136</td>
-<td align="right">0.8854107</td>
+<td style="text-align: right;">0.0466922</td>
+<td style="text-align: right;">0.2820745</td>
+<td style="text-align: right;">0.1655316</td>
+<td style="text-align: right;">0.8685256</td>
 </tr>
 <tr class="even">
 <td>Early_Infection</td>
-<td align="right">0.5207312</td>
-<td align="right">0.3105032</td>
-<td align="right">1.6770559</td>
-<td align="right">0.0935316</td>
+<td style="text-align: right;">0.4753632</td>
+<td style="text-align: right;">0.3048857</td>
+<td style="text-align: right;">1.5591523</td>
+<td style="text-align: right;">0.1189603</td>
 </tr>
 <tr class="odd">
 <td>CHD</td>
-<td align="right">1.2364024</td>
-<td align="right">0.3786224</td>
-<td align="right">3.2655289</td>
-<td align="right">0.0010926</td>
-</tr>
-<tr class="even">
-<td>Cerebral_Infarction</td>
-<td align="right">0.9023069</td>
-<td align="right">0.5167924</td>
-<td align="right">1.7459757</td>
-<td align="right">0.0808152</td>
-</tr>
-<tr class="odd">
-<td>COPD</td>
-<td align="right">0.9351284</td>
-<td align="right">0.6386495</td>
-<td align="right">1.4642279</td>
-<td align="right">0.1431317</td>
-</tr>
-<tr class="even">
-<td>Renal_Failure</td>
-<td align="right">0.6642553</td>
-<td align="right">0.6410489</td>
-<td align="right">1.0362007</td>
-<td align="right">0.3001085</td>
+<td style="text-align: right;">1.1833551</td>
+<td style="text-align: right;">0.3711950</td>
+<td style="text-align: right;">3.1879609</td>
+<td style="text-align: right;">0.0014328</td>
 </tr>
 </tbody>
 </table>
 
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Estimate</th>
+<th style="text-align: right;">Std. Error</th>
+<th style="text-align: right;">z value</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td style="text-align: right;">-2.5960546</td>
+<td style="text-align: right;">0.8248978</td>
+<td style="text-align: right;">-3.1471228</td>
+<td style="text-align: right;">0.0016489</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td style="text-align: right;">0.0220286</td>
+<td style="text-align: right;">0.0111294</td>
+<td style="text-align: right;">1.9793162</td>
+<td style="text-align: right;">0.0477804</td>
+</tr>
+<tr class="odd">
+<td>Male</td>
+<td style="text-align: right;">-0.0416592</td>
+<td style="text-align: right;">0.2890719</td>
+<td style="text-align: right;">-0.1441136</td>
+<td style="text-align: right;">0.8854107</td>
+</tr>
+<tr class="even">
+<td>Early_Infection</td>
+<td style="text-align: right;">0.5207312</td>
+<td style="text-align: right;">0.3105032</td>
+<td style="text-align: right;">1.6770559</td>
+<td style="text-align: right;">0.0935316</td>
+</tr>
+<tr class="odd">
+<td>CHD</td>
+<td style="text-align: right;">1.2364024</td>
+<td style="text-align: right;">0.3786224</td>
+<td style="text-align: right;">3.2655289</td>
+<td style="text-align: right;">0.0010926</td>
+</tr>
+<tr class="even">
+<td>Cerebral_Infarction</td>
+<td style="text-align: right;">0.9023069</td>
+<td style="text-align: right;">0.5167924</td>
+<td style="text-align: right;">1.7459757</td>
+<td style="text-align: right;">0.0808152</td>
+</tr>
+<tr class="odd">
+<td>COPD</td>
+<td style="text-align: right;">0.9351284</td>
+<td style="text-align: right;">0.6386495</td>
+<td style="text-align: right;">1.4642279</td>
+<td style="text-align: right;">0.1431317</td>
+</tr>
+<tr class="even">
+<td>Renal_Failure</td>
+<td style="text-align: right;">0.6642553</td>
+<td style="text-align: right;">0.6410489</td>
+<td style="text-align: right;">1.0362007</td>
+<td style="text-align: right;">0.3001085</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Estimate</th>
+<th style="text-align: right;">Std. Error</th>
+<th style="text-align: right;">z value</th>
+<th style="text-align: right;">Pr(&gt;|z|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td style="text-align: right;">-2.9195778</td>
+<td style="text-align: right;">0.8068492</td>
+<td style="text-align: right;">-3.6184925</td>
+<td style="text-align: right;">0.0002963</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td style="text-align: right;">0.0247662</td>
+<td style="text-align: right;">0.0109997</td>
+<td style="text-align: right;">2.2515310</td>
+<td style="text-align: right;">0.0243519</td>
+</tr>
+<tr class="odd">
+<td>Male</td>
+<td style="text-align: right;">-0.0190545</td>
+<td style="text-align: right;">0.2822476</td>
+<td style="text-align: right;">-0.0675099</td>
+<td style="text-align: right;">0.9461758</td>
+</tr>
+<tr class="even">
+<td>Early_Infection</td>
+<td style="text-align: right;">0.5133597</td>
+<td style="text-align: right;">0.3056213</td>
+<td style="text-align: right;">1.6797248</td>
+<td style="text-align: right;">0.0930109</td>
+</tr>
+<tr class="odd">
+<td>ComorbidityScore</td>
+<td style="text-align: right;">0.2938610</td>
+<td style="text-align: right;">0.0944214</td>
+<td style="text-align: right;">3.1122296</td>
+<td style="text-align: right;">0.0018568</td>
+</tr>
+</tbody>
+</table>
