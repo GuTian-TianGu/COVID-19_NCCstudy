@@ -399,17 +399,17 @@ Summary Data
      </tr>
      <tr>
      <td class='rowlabel'>Mean (SD)</td>
-     <td>1.21 (1.40)</td>
-     <td>2.15 (2.17)</td>
+     <td>1.02 (1.11)</td>
+     <td>1.60 (2.17)</td>
      <td>&lt;0.001</td>
-     <td>1.53 (1.76)</td>
+     <td>1.22 (1.21)</td>
      </tr>
      <tr>
      <td class='rowlabel lastrow'>Median [Min, Max]</td>
-     <td class='lastrow'>1.00 [0.00, 11.0]</td>
-     <td class='lastrow'>2.00 [0.00, 16.0]</td>
+     <td class='lastrow'>1.00 [0.00, 5.0]</td>
+     <td class='lastrow'>1.50 [0.00, 5.0]</td>
      <td class='lastrow'></td>
-     <td class='lastrow'>1.00 [0.00, 16.0]</td>
+     <td class='lastrow'>1.00 [0.00, 5.0]</td>
      </tr>
      </tbody>
      </table>
@@ -694,12 +694,12 @@ Univariate Cox PH Model
 <tbody>
 <tr class="odd">
 <td>ComorbidityScore</td>
-<td style="text-align: right;">0.1919135</td>
-<td style="text-align: right;">1.211566</td>
-<td style="text-align: right;">0.0324156</td>
-<td style="text-align: right;">0.0391562</td>
-<td style="text-align: right;">4.90123</td>
-<td style="text-align: right;">1e-06</td>
+<td style="text-align: right;">0.4018354</td>
+<td style="text-align: right;">1.494565</td>
+<td style="text-align: right;">0.0772606</td>
+<td style="text-align: right;">0.0816546</td>
+<td style="text-align: right;">4.921158</td>
+<td style="text-align: right;">9e-07</td>
 </tr>
 </tbody>
 </table>
@@ -824,39 +824,39 @@ Model 1:
 <tbody>
 <tr class="odd">
 <td>Age</td>
-<td style="text-align: right;">0.0423086</td>
-<td style="text-align: right;">1.043216</td>
-<td style="text-align: right;">0.0091587</td>
-<td style="text-align: right;">0.0105362</td>
-<td style="text-align: right;">4.0155648</td>
-<td style="text-align: right;">0.0000593</td>
+<td style="text-align: right;">0.0422091</td>
+<td style="text-align: right;">1.043113</td>
+<td style="text-align: right;">0.0092716</td>
+<td style="text-align: right;">0.0106404</td>
+<td style="text-align: right;">3.9668523</td>
+<td style="text-align: right;">0.0000728</td>
 </tr>
 <tr class="even">
 <td>Male</td>
-<td style="text-align: right;">0.1056608</td>
-<td style="text-align: right;">1.111445</td>
-<td style="text-align: right;">0.2142733</td>
-<td style="text-align: right;">0.2318977</td>
-<td style="text-align: right;">0.4556353</td>
-<td style="text-align: right;">0.6486522</td>
+<td style="text-align: right;">0.0478739</td>
+<td style="text-align: right;">1.049038</td>
+<td style="text-align: right;">0.2145176</td>
+<td style="text-align: right;">0.2295828</td>
+<td style="text-align: right;">0.2085257</td>
+<td style="text-align: right;">0.8348185</td>
 </tr>
 <tr class="odd">
 <td>Early_Infection</td>
-<td style="text-align: right;">0.2735787</td>
-<td style="text-align: right;">1.314661</td>
-<td style="text-align: right;">0.2341008</td>
-<td style="text-align: right;">0.2458234</td>
-<td style="text-align: right;">1.1129073</td>
-<td style="text-align: right;">0.2657482</td>
+<td style="text-align: right;">0.2460885</td>
+<td style="text-align: right;">1.279013</td>
+<td style="text-align: right;">0.2320980</td>
+<td style="text-align: right;">0.2455243</td>
+<td style="text-align: right;">1.0022980</td>
+<td style="text-align: right;">0.3161997</td>
 </tr>
 <tr class="even">
 <td>ComorbidityScore</td>
-<td style="text-align: right;">0.1221022</td>
-<td style="text-align: right;">1.129870</td>
-<td style="text-align: right;">0.0380384</td>
-<td style="text-align: right;">0.0397651</td>
-<td style="text-align: right;">3.0705854</td>
-<td style="text-align: right;">0.0021364</td>
+<td style="text-align: right;">0.2673628</td>
+<td style="text-align: right;">1.306514</td>
+<td style="text-align: right;">0.0816799</td>
+<td style="text-align: right;">0.0822388</td>
+<td style="text-align: right;">3.2510526</td>
+<td style="text-align: right;">0.0011498</td>
 </tr>
 </tbody>
 </table>
