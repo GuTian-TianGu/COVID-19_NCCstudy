@@ -1142,38 +1142,38 @@ similar.
 <tbody>
 <tr class="odd">
 <td>(Intercept)</td>
-<td style="text-align: right;">-2.9195778</td>
-<td style="text-align: right;">0.8068492</td>
-<td style="text-align: right;">-3.6184925</td>
-<td style="text-align: right;">0.0002963</td>
+<td style="text-align: right;">-3.0054603</td>
+<td style="text-align: right;">0.8072070</td>
+<td style="text-align: right;">-3.7232834</td>
+<td style="text-align: right;">0.0001966</td>
 </tr>
 <tr class="even">
 <td>Age</td>
-<td style="text-align: right;">0.0247662</td>
-<td style="text-align: right;">0.0109997</td>
-<td style="text-align: right;">2.2515310</td>
-<td style="text-align: right;">0.0243519</td>
+<td style="text-align: right;">0.0271152</td>
+<td style="text-align: right;">0.0109868</td>
+<td style="text-align: right;">2.4679816</td>
+<td style="text-align: right;">0.0135877</td>
 </tr>
 <tr class="odd">
 <td>Male</td>
-<td style="text-align: right;">-0.0190545</td>
-<td style="text-align: right;">0.2822476</td>
-<td style="text-align: right;">-0.0675099</td>
-<td style="text-align: right;">0.9461758</td>
+<td style="text-align: right;">-0.0188726</td>
+<td style="text-align: right;">0.2797069</td>
+<td style="text-align: right;">-0.0674726</td>
+<td style="text-align: right;">0.9462054</td>
 </tr>
 <tr class="even">
 <td>Early_Infection</td>
-<td style="text-align: right;">0.5133597</td>
-<td style="text-align: right;">0.3056213</td>
-<td style="text-align: right;">1.6797248</td>
-<td style="text-align: right;">0.0930109</td>
+<td style="text-align: right;">0.4863549</td>
+<td style="text-align: right;">0.3054186</td>
+<td style="text-align: right;">1.5924208</td>
+<td style="text-align: right;">0.1112902</td>
 </tr>
 <tr class="odd">
 <td>ComorbidityScore</td>
-<td style="text-align: right;">0.2938610</td>
-<td style="text-align: right;">0.0944214</td>
-<td style="text-align: right;">3.1122296</td>
-<td style="text-align: right;">0.0018568</td>
+<td style="text-align: right;">0.3104978</td>
+<td style="text-align: right;">0.1148960</td>
+<td style="text-align: right;">2.7024239</td>
+<td style="text-align: right;">0.0068836</td>
 </tr>
 </tbody>
 </table>
